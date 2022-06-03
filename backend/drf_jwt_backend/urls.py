@@ -15,11 +15,16 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from ren import urls
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/auth/', include('authentication.urls')),
     path('api/cars/', include('cars.urls')),
+    path('api/art/', include('ren.urls')),
+    # path('api/ren/', include('ren.urls')),
+
 ]
 
 # Portfolio page with seperate folder to hold the component. 

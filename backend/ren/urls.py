@@ -9,9 +9,9 @@ from ren import views
 #<<<<<<<<<<<<<<<<<<<<< Below this line we will provide a variable set equal to a list of url patterns. 
 
 # Our patterns variable will be named ren_urlpatters, here we will route functions 
-ren_urlpatterns = [
+urlpatterns = [
     # Here we will assign our first path, an open string  
-    path('', views.user_ren),
+    path('', views.list_art),
     # Here our second path
-    path('all/', views.user_ren),
+    path('', views.user_art),
 ]

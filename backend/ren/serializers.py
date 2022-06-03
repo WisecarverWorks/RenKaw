@@ -9,4 +9,4 @@ class ArtSerializer(serializers.ModelSerializer):
     class Meta:
         model = Art
         fields = ['type','name','year','price']
-        depth = 1 
+        

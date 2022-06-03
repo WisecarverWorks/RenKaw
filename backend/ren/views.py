@@ -24,9 +24,9 @@ from .serializers import ArtSerializer
 
 @api_view(['GET']) 
 @permission_classes([AllowAny]) # Allows any class with permissions
-def get_all_art(request):
-    artwork = Art.objects.all()
-    serializer = ArtSerializer(artwork, many=True)
+def list_art(request):
+    art = Art.objects.all()
+    serializer = ArtSerializer(art, many=True)
     return Response(serializer.data)
     
 
