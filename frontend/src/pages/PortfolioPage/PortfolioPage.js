@@ -1,7 +1,6 @@
+import React, {useContext} from "react";
 import AuthContext from "../../context/AuthContext";
 import useCustomForm from "../../hooks/useCustomForm";
-
-
 
 const PortfolioPage = () => {
   const { registerArt } = useContext(AuthContext);
@@ -58,6 +57,7 @@ const PortfolioPage = () => {
         <p style={{ fontSize: "12px" }}>
           NOTE: Make sure you complete all needed inputs. 
         </p>
+        <button>Post!</button>
       </form>
     </div>
   );
