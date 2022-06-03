@@ -19,3 +19,4 @@ class Art(models.Model):
 
 # Do we need a class for members? 
 
+
