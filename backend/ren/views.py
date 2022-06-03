@@ -27,6 +27,7 @@ from .serializers import ArtSerializer
 def list_art(request):
     art = Art.objects.all()
     serializer = ArtSerializer(art, many=True)
+    
     return Response(serializer.data)
     
 
