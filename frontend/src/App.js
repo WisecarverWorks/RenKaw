@@ -10,7 +10,6 @@ import LoginPage from "./pages/LoginPage/LoginPage";
 import RegisterPage from "./pages/RegisterPage/RegisterPage";
 
 // Component Imports
-// import FileUpload from "./components/FileUpload/FileUpload";
 import Navbar from "./components/NavBar/NavBar";
 import Footer from "./components/Footer/Footer";
 
@@ -18,9 +17,17 @@ import Footer from "./components/Footer/Footer";
 import PrivateRoute from "./utils/PrivateRoute";
 import PortfolioPage from "./pages/PortfolioPage/PortfolioPage";
 import UploadFile from "./components/UploadFile/UploadFile";
+import axios from "axios";
 // import React, {Component}  from "react";
 
 function App() {
+  const getQuote = () => {
+    axios.get('http://localhost:8000/api/ren/').then(res => {
+      console.log(res)
+    }).catch(err => {
+      console.log(err)
+    })
+  }
   return (
     <div>
       <Navbar />
