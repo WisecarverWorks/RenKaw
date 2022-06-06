@@ -5,7 +5,7 @@ from .models import Member
 
 # determine serializer class model
 
-class MemberkSerializer(serializers.ModelSerializer):
+class MembersSerializer(serializers.ModelSerializer):
 
     class Meta:
         model: Member

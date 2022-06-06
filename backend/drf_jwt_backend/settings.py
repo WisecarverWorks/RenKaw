@@ -23,7 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [] # What are we doing here?
 
 AUTH_USER_MODEL = 'authentication.User'
 
@@ -40,7 +40,9 @@ INSTALLED_APPS = [
     'rest_framework',
     'authentication.apps.AuthenticationConfig',
     'corsheaders',
-    'cars.apps.CarsConfig'  # This app is for example use only
+    'cars.apps.CarsConfig',
+    'artwork',
+    'members',  # This app is for example use only
 ]
 
 MIDDLEWARE = [
@@ -137,6 +139,10 @@ SIMPLE_JWT = {
     'ISSUER': None,
 
     'AUTH_HEADER_TYPES': ('Bearer',),
+    'ARTWORK_ID_FIELD': 'id',
+    'ARTWORK_ID_CLAIM': 'artwork_id',
+    'MEMBER_ID_FIELD': 'id',
+    'MEMBER_ID_CLAIM': 'member_id',
     'USER_ID_FIELD': 'id',
     'USER_ID_CLAIM': 'user_id',
 
