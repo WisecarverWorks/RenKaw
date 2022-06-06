@@ -8,7 +8,7 @@ class Member(models.Model):
     # user will handle our foriegn key for members 
     # customerid will hold a key
     user = models.ForeignKey(User, on_delete=models.CASCADE)
-    memberId = models.IntegerField()
+    memberId = models.IntegerField() # I wnnt this to be a foriegn key
     firstName = models.CharField(max_length=25)
     lastName = models.CharField(max_length=25)
     city = models.CharField(max_length=25)
