@@ -12,7 +12,8 @@ from .serializers import MembersSerializer
 
 # << decorators allow our functions to use HTTP REQUESTS
 
-@api_view(['GET'])
+
+@api_view(['GET', 'POST'])
 @permission_classes([AllowAny])
 def get_all_members(request):
     members = Member.objects.all()
@@ -22,16 +23,16 @@ def get_all_members(request):
 
 @api_view(['GET', 'POST'])
 @permission_classes([IsAuthenticated])
-def user_members(request):
+def members(request):
     print(
-        'User ', f"{request.user.id} {request.user.memberId}")
+        'Member ', f"{request.member.id} {request.member.memberId}")
     if request.method == 'POST':
         serializer = MembersSerializer(data=request.data)
         if serializer.is_valid():
-            serializer.save(user=request.user)
+            serializer.save(member=request.member)
             return Response(serializer.data, status=status.HTTP_201_CREATED)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
     elif request.method == 'GET':
-        creations = Member.objects.filter(user_id=request.user.id)
-        serializer = MembersSerializer(creations, many=True)
+        members = Member.objects.filter(user_id=request.member.memberId)
+        serializer = MembersSerializer(members, many=True)
         return Response(serializer.data)

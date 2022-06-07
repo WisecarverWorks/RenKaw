@@ -41,8 +41,8 @@ INSTALLED_APPS = [
     'authentication.apps.AuthenticationConfig',
     'corsheaders',
     'cars.apps.CarsConfig',
-    'artwork',
-    'members',  # This app is for example use only
+    'artwork.apps.ArtworkConfig',
+    'members.apps.MembersConfig',  # This app is for example use only
 ]
 
 MIDDLEWARE = [
@@ -139,10 +139,10 @@ SIMPLE_JWT = {
     'ISSUER': None,
 
     'AUTH_HEADER_TYPES': ('Bearer',),
-    'ARTWORK_ID_FIELD': 'id',
-    'ARTWORK_ID_CLAIM': 'artwork_id',
-    'MEMBER_ID_FIELD': 'id',
-    'MEMBER_ID_CLAIM': 'member_id',
+    #'ARTWORK_ID_FIELD': 'id',
+    #'ARTWORK_ID_CLAIM': 'artwork_id',
+    #'MEMBER_ID_FIELD': 'id',
+    #'MEMBER_ID_CLAIM': 'member_id',
     'USER_ID_FIELD': 'id',
     'USER_ID_CLAIM': 'user_id',
 

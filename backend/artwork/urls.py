@@ -15,6 +15,6 @@ from artwork import views
 # <<<<<<<<<<<<<<<<< Paths for app Artwork
 
 urlpatterns = [
-    path('', views.user_artwork),
-    path('all/', views.get_all_artwork), 
+    path('', views.user_artwork, name='artwork'),
+    path('', views.get_all_artwork, name='artwork'), 
 ]

@@ -15,6 +15,6 @@ from members import views
 # <<<<<<<<<<<<<<<<< Paths for app Artwork
 
 urlpatterns = [
-    path('', views.user_members),
-    path('all/', views.get_all_members), 
+    path('', views.members, name='members'),
+    path('', views.get_all_members, name='members'), 
 ]
