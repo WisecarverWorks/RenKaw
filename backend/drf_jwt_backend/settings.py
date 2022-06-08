@@ -23,37 +23,36 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [] # What are we doing here?
-
+ALLOWED_HOSTS = ["*"]
 AUTH_USER_MODEL = 'authentication.User'
 
 
 # Application definition
 
 INSTALLED_APPS = [
+    'corsheaders',
+    'rest_framework',
     'django.contrib.admin',
     'django.contrib.auth',
-    'django.contrib.contenttypes',
+    'cars.apps.CarsConfig',
     'django.contrib.sessions',
+    'django.contrib.contenttypes',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'rest_framework',
-    'authentication.apps.AuthenticationConfig',
-    'corsheaders',
-    'cars.apps.CarsConfig',
     'artwork.apps.ArtworkConfig',
     'members.apps.MembersConfig',  # This app is for example use only
+    'authentication.apps.AuthenticationConfig',
 ]
 
 MIDDLEWARE = [
-    'django.middleware.security.SecurityMiddleware',
-    'django.contrib.sessions.middleware.SessionMiddleware',
-    'django.middleware.common.CommonMiddleware',
-    'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
-    'django.contrib.messages.middleware.MessageMiddleware',
-    'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'corsheaders.middleware.CorsMiddleware',
+    'django.middleware.csrf.CsrfViewMiddleware',
+    'django.middleware.security.SecurityMiddleware',
+    'django.middleware.common.CommonMiddleware',
+    'django.contrib.messages.middleware.MessageMiddleware',
+    'django.contrib.sessions.middleware.SessionMiddleware',
+    'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
 CORS_ORIGIN_ALLOW_ALL = True
@@ -139,10 +138,6 @@ SIMPLE_JWT = {
     'ISSUER': None,
 
     'AUTH_HEADER_TYPES': ('Bearer',),
-    #'ARTWORK_ID_FIELD': 'id',
-    #'ARTWORK_ID_CLAIM': 'artwork_id',
-    #'MEMBER_ID_FIELD': 'id',
-    #'MEMBER_ID_CLAIM': 'member_id',
     'USER_ID_FIELD': 'id',
     'USER_ID_CLAIM': 'user_id',
 

@@ -10,10 +10,12 @@
 }
 
 html {
+  background-color: teal;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
-
+ul {
+}
 p {
   font-size: 20px;
 }

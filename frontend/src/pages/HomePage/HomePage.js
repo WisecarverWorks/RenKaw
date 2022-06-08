@@ -11,7 +11,7 @@ const HomePage = () => {
   //TODO: Add an AddCars Page to add a car for a logged in user's garage
   const [user, token] = useAuth();
   const [members, setMembers] = useState([]);
-
+////////////////////////////////////////////////////  HELP!
   useEffect(() => {
     const fetchMember = async () => {
       try {
@@ -28,7 +28,7 @@ const HomePage = () => {
     fetchMember();
   }, [token]);
   return (
-    <div className="container" >
+    <div className = "container" >
       <h1>Welcome {user.username}!</h1>
        <h2>-MEMBER-TEST-PAGE-</h2>
         {members &&
@@ -42,3 +42,4 @@ const HomePage = () => {
 };
 
 export default HomePage;
+
