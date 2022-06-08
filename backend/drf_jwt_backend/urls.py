@@ -19,9 +19,5 @@ from django.urls import path, include
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/auth/', include('authentication.urls')),
-    path('api/members/', include('members.urls')), # Are these needed?
-    path('api/artwork/', include('artwork.urls')), # Are these needed?
     path('api/cars/', include('cars.urls')),
-    #path('api/artwork/', include('artwork.urls')), # This should give us the ability to create a fine endpoint
-    #path('api/members/', include('members.urls')), # This should give us the ability to create a fine endpoint
 ]

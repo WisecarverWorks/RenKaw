@@ -2,19 +2,16 @@
 //\\//\\//\\//\\//\\//\\//\\//\\//\\
 import React from "react";
 
-// React Components
-//
-function RenniePage() {
-    
-    return (
-     <div>
-         <label>FILE UPLOAD</label>
-         
-    
-    </div>
-    );
-}
 
-  
+// React Components
+function RenniePage() {
+     <form>
+         <label>Type of Art</label>
+     </form>
+    
+}  
+    
+    
+    
 
 export default RenniePage;

@@ -21,38 +21,36 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG=fs.* node example_upload.js
+ALLOWED_HOSTS = ['*']
 
-ALLOWED_HOSTS = ["*"]
 AUTH_USER_MODEL = 'authentication.User'
 
 
 # Application definition
 
 INSTALLED_APPS = [
-    'corsheaders',
-    'rest_framework',
     'django.contrib.admin',
     'django.contrib.auth',
-    'cars.apps.CarsConfig',
-    'django.contrib.sessions',
     'django.contrib.contenttypes',
+    'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'artwork.apps.ArtworkConfig',
-    'members.apps.MembersConfig',  # This app is for example use only
+    'rest_framework',
     'authentication.apps.AuthenticationConfig',
+    'corsheaders',
+    'cars.apps.CarsConfig'  # This app is for example use only
 ]
 
 MIDDLEWARE = [
-    'django.contrib.auth.middleware.AuthenticationMiddleware',
-    'corsheaders.middleware.CorsMiddleware',
-    'django.middleware.csrf.CsrfViewMiddleware',
     'django.middleware.security.SecurityMiddleware',
-    'django.middleware.common.CommonMiddleware',
-    'django.contrib.messages.middleware.MessageMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'django.middleware.common.CommonMiddleware',
+    'django.middleware.csrf.CsrfViewMiddleware',
+    'django.contrib.auth.middleware.AuthenticationMiddleware',
+    'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
 ]
 
 CORS_ORIGIN_ALLOW_ALL = True

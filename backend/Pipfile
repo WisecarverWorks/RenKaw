@@ -11,7 +11,6 @@ mysql-connector-python = "==8.0.26"
 django-cors-headers = "*"
 tzdata = "*"
 mysqlclient = "*"
-dependencies = "*"
 
 [dev-packages]
 autopep8 = "*"

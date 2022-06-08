@@ -14,27 +14,28 @@ import Footer from "./components/Footer/Footer";
 // Util Imports
 import PrivateRoute from "./utils/PrivateRoute";
 
+const Client = require('filestack-js').init('apikey');
 
-function App() {
-  return (
-    <div>
-      <Navbar />
-      <Routes>
-        <Route
-          path="/"
-          element={
-            <PrivateRoute>
-              <HomePage />
-              <RenniePage />
-            </PrivateRoute>
-        }  
-        />
-        <Route path="/register" element={<RegisterPage />} />
-        <Route path="/login" element={<LoginPage />} />
-      </Routes>
-      <Footer />
-    </div>
-  );
-}
+  function App() {
+    return (
+      <div>
+        <Navbar />
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <PrivateRoute>
+                <HomePage />
+                <RenniePage />
+              </PrivateRoute>
+            }  
+          />
+          <Route path="/register" element={<RegisterPage />} />
+          <Route path="/login" element={<LoginPage />} />
+        </Routes>
+        <Footer />
+      </div>
+    );
+  }
 
-export default App;
+  export default App;
