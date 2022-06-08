@@ -5,11 +5,11 @@ ul {
 }
 
 li {
-  font-size: 1.25rem;
+  font-size: 1rem;
 }
 
 .navBar {
-  background: steelblue;
+  background: skyblue;
   box-shadow: 4px 2px 5px gray;
   color: white;
   margin-bottom: 2rem;

@@ -3,7 +3,19 @@ import "./Footer.css";
 const Footer = () => {
   return (
     <footer>
-      <p>Copyright © 2022</p>{" "}
+      <input type='button' size='large'></input>
+       <input type='checkbox'></input>
+       <input type='checkbox'></input>
+       <input type="checkbox"></input>
+       <input type='checkbox'></input>
+       <input type='checkbox'></input>
+       <input type="checkbox"></input>
+       <input type='checkbox'></input>
+       <input type='checkbox'></input>
+       <input type="checkbox"></input>
+       <input type="color"></input>
+          <hr></hr>
+        <p> COPY | | FACEBOOK | | SHOPIFY </p>
     </footer>
   );
 };

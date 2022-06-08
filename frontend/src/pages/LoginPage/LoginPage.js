@@ -15,9 +15,9 @@ const LoginPage = () => {
   useEffect(() => {
     if (isServerError) {
       reset();
-    }
-  }, [isServerError]);
-
+    }}, 
+    [isServerError]);
+  
   return (
     <div className="container">
       <form className="form" onSubmit={handleSubmit}>
