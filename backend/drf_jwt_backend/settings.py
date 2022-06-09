@@ -152,6 +152,6 @@ SIMPLE_JWT = {
 }
 
 try:
-    from drf_jwt_backend.local_settings import *
+    from test_capstone.local_settings import *
 except ImportError:
     pass
