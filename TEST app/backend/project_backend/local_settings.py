@@ -1,4 +1,4 @@
-SECRET_KEY ='ASDF321WE!@#$%rt^yghtyru^&@#$%^&*fgtyhui*)_(*&^%r$efghuj'
+SECRET_KEY ='ASDF321WE!@#$t^yghtyru^&@#$%^&*fgtyhui*)_(*&^$efghuj'
 
 DATABASES = {
     'default': {

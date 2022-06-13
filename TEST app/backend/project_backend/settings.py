@@ -40,7 +40,6 @@ INSTALLED_APPS = [
     'rest_framework',
     'authentication.apps.AuthenticationConfig',
     'corsheaders',
-    'project_backend',
     'projects.apps.ProjectsConfig',  # This app is for example use only
 ]
 
@@ -153,6 +152,6 @@ SIMPLE_JWT = {
 }
 
 try:
-    from test_capstone.local_settings import *
+    from project_backend.local_settings import *
 except ImportError:
     pass
