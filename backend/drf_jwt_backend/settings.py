@@ -21,8 +21,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG=fs.* node example_upload.js
-ALLOWED_HOSTS = ['*']
+DEBUG= True
+ALLOWED_HOSTS = []
 
 AUTH_USER_MODEL = 'authentication.User'
 
@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'authentication.apps.AuthenticationConfig',
     'corsheaders',
+    'artwork',
     'cars.apps.CarsConfig'  # This app is for example use only
 ]
 

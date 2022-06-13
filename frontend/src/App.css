@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap");
 
 
 *,
@@ -60,4 +60,8 @@ button:hover {
   padding: 8px 16px;
   font-size: 12px;
   
+} */
+.app {
+background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(185,98,21,0.7609179413953081) 39%, rgba(0,212,255,1) 100%);
+
 }

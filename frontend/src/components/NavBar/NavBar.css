@@ -9,9 +9,14 @@ li {
 }
 
 .navBar {
-  background: skyblue;
+  /* background: skyblue; */
+  /* background: #649173;  fallback for old browsers */
+  /* background: -webkit-linear-gradient(to right, #DBD5A4, #649173);  Chrome 10-25, Safari 5.1-6 */
+  /* background: linear-gradient(to right, #3bf1d3, #649173); W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: rgb(2,0,36);
+  background: linear-gradient(180deg, rgba(248, 167, 96, 0.761) 39%, rgb(74, 241, 182) 100%);
   box-shadow: 4px 2px 5px gray;
-  color: white;
+  color: rgb(106, 105, 105);
   margin-bottom: 2rem;
   padding: 1.5rem 2rem;
 }
@@ -19,12 +24,12 @@ li {
 .navBar button {
   background: transparent;
   border: 2px solid white;
-  color: white;
+  color: rgb(106, 105, 105);
   padding: 0.4rem 0.5rem;
 }
 
 .navBar button:hover {
-  background: white;
+  color: rgb(106, 105, 105);;
   color: steelblue;
   cursor: pointer;
 }
