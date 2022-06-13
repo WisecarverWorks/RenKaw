@@ -5,7 +5,7 @@ ul {
 }
 
 li {
-  font-size: 1rem;
+  font-size: .5rem;
 }
 
 .navBar {
@@ -17,8 +17,8 @@ li {
   background: linear-gradient(180deg, rgba(248, 167, 96, 0.761) 39%, rgb(74, 241, 182) 100%);
   box-shadow: 4px 2px 5px gray;
   color: rgb(106, 105, 105);
-  margin-bottom: 2rem;
-  padding: 1.5rem 2rem;
+  margin-bottom: auto;
+  padding: .66rem .66rem;
 }
 
 .navBar button {

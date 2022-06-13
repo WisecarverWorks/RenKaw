@@ -29,8 +29,8 @@ const HomePage = () => {
   }, [token]);
   return (
     <div className = "container" >
-      <h1>Welcome {user.username}!</h1>
-       <h2>-MEMBER-TEST-PAGE-</h2>
+      {/* <h1>Welcome {user.username}!</h1> */}
+       {/* <h2>-MEMBER-TEST-PAGE-</h2> */}
         {members &&
           members.map((member) => (
           <p key={member.id}>

@@ -12,10 +12,13 @@ import Footer from "./components/Footer/Footer";
 
 // Util Imports
 import PrivateRoute from "./utils/PrivateRoute";
+import RennieDatabase from "./pages/RennieDatabase/RennieDatabase";
 
 
 
-  function App() {
+
+function App() {
+
     return (
       <div>
         <Navbar />
@@ -24,7 +27,12 @@ import PrivateRoute from "./utils/PrivateRoute";
             path="/"
             element={
               <PrivateRoute>
-                <HomePage />
+                <ol>
+                  <RennieDatabase  />
+                </ol>
+                <ul>
+                  <HomePage />
+                </ul>
               </PrivateRoute>
             }  
           />
@@ -33,7 +41,7 @@ import PrivateRoute from "./utils/PrivateRoute";
         </Routes>
         <Footer />
       </div>
-    );
-  }
+  );
+}
 
-  export default App;
+export default App;

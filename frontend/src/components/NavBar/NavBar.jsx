@@ -14,12 +14,7 @@ const Navbar = () => {
   return (
     <div className="navBar">
       <div className="wrapper">
-        <div className="wrapper">
-          <div className="search">
-            <input type="text" placeholder="search here..." />{' '}
-            <button type='outlined' >Search</button>
-          </div>   
-             <ul>
+          <div>     <ul>
                 <li className="brand">
                   <Link to="/" style={{ textDecoration: "none", color: "inherit" }}>
                    <b>Rennie Tillis Collection</b>
