@@ -1,6 +1,3 @@
-# drf_jwt_backend
-
-
 Kyle Wisecarver
 Capstone User Stories 
 (Ren’s Art ecommerce)

@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import AuthContext from "../../context/AuthContext";
 import useCustomForm from "../../hooks/useCustomForm";
 
+
 const RegisterPage = () => {
   const { registerUser } = useContext(AuthContext);
   const defaultValues = {
@@ -17,7 +18,8 @@ const RegisterPage = () => {
   );
 
   return (
-    <div className="container">
+
+      <div className="container">
       <form className="form" onSubmit={handleSubmit}>
         <label>
           Username:{" "}
@@ -70,7 +72,8 @@ const RegisterPage = () => {
         </p>
         <button>Register!</button>
       </form>
-    </div>
+      </div>
+
   );
 };
 

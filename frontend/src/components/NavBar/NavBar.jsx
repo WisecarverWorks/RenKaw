@@ -9,20 +9,16 @@ const Navbar = () => {
   const navigate = useNavigate();
   return (
     <div className="navBar">
-      <ul>
-        <li className="brand">
-          <Link to="/" style={{ textDecoration: "none", color: "white" }}>
-            <b>React/Django JWT</b>
-          </Link>
-        </li>
-        <li>
+        <ol className="brand">
+          <Link to="/portfolio" style={{ textDecoration: "none", color: "white" }} />
+          <b>Rennie Tillis Artwork</b>
+        </ol>
           {user ? (
             <button onClick={logoutUser}>Logout</button>
           ) : (
             <button onClick={() => navigate("/login")}>Login</button>
           )}
-        </li>
-      </ul>
+
     </div>
   );
 };

@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'authentication.apps.AuthenticationConfig',
     'corsheaders',
+    'ren',
     'cars.apps.CarsConfig'  # This app is for example use only
 ]
 
@@ -152,6 +153,6 @@ SIMPLE_JWT = {
 }
 
 try:
-    from test_capstone.local_settings import *
+    from drf_jwt_backend.local_settings import *
 except ImportError:
     pass
