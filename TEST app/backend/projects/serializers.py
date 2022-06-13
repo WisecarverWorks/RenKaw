@@ -7,5 +7,5 @@ from .models import Project
 class ProjectSerializer(serializers.ModelSerializer):
     class Meta:
         model = Project
-        fields = ['id', 'type', 'title', 'year', 'user_id', 'price']
+        fields = ['id', 'ptype', 'title', 'year', 'user_id', 'price']
         depth = 1

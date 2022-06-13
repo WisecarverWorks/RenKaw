@@ -20,14 +20,14 @@ def get_all_projects(request):
 @permission_classes([IsAuthenticated])
 def project_projects(request):
     print(
-        'Project ', f"{request.Project.id} {request.Project.email} {request.Project.Projectname}")
+        'Project ', f"{request.project.id} {request.project.email} {request.project.Projectname}")
     if request.method == 'POST':
         serializer = projectserializer(data=request.data)
         if serializer.is_valid():
-            serializer.save(Project=request.Project)
+            serializer.save(project=request.project)
             return Response(serializer.data, status=status.HTTP_201_CREATED)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
     elif request.method == 'GET':
-        projects = Member.objects.filter(Project_id=request.Project.id)
+        projects = Member.objects.filter(project_id=request.project.id)
         serializer = projectserializer(projects, many=True)
         return Response(serializer.data)

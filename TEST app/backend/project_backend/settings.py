@@ -40,7 +40,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'authentication.apps.AuthenticationConfig',
     'corsheaders',
-    'projects.apps.ProjectsConfig',  # This app is for example use only
+    'projects', #This app is for example use only
 ]
 
 MIDDLEWARE = [
