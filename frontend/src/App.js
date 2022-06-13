@@ -19,9 +19,11 @@ import PortfolioPage from "./pages/PortfolioPage/PortfolioPage";
 
 
 import axios from "axios";
+
 // import React, {Component}  from "react";
 
 function App() {
+
   const getQuote = () => {
     axios.get('http://localhost:8000/api/ren/').then(res => {
       console.log(res)
@@ -37,8 +39,8 @@ function App() {
           path="/"
           element={
             <PrivateRoute>
-              <PortfolioPage />
               <HomePage />
+              <PortfolioPage />
             </PrivateRoute>
           }
         />

@@ -33,9 +33,9 @@ const HomePage = () => {
      <body>
       <h5>Home Page for {user.username}!</h5>
       {ren &&
-        ren.map((art) => (
-          <p key={art.id}>
-            {art.year} {art.title} {art.price}
+        ren.map((ren) => (
+          <p key={ren.id}>
+            {ren.year} {ren.type} {ren.price}
           </p>
         ))}
      </body>

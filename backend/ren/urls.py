@@ -4,7 +4,7 @@ from django.urls import path, include
 
 # We want to import the views file from our Ren app
 
-from ren import views
+from ren import views, art
 
 #<<<<<<<<<<<<<<<<<<<<< Below this line we will provide a variable set equal to a list of url patterns. 
 

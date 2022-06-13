@@ -22,7 +22,7 @@ const PortfolioPage = () => {
         <h1 style={{
           postion: 'center',
         }}>
-          Rennie's Post Artwork Page
+          Rennie's Portfolio
         </h1>
           </header>
           <table>
@@ -31,19 +31,18 @@ const PortfolioPage = () => {
               <div> 
               <th>Artwork Type</th>
               <input type='text' defaultValue={" "} onChange={{formData, handleInputChange}} onSubmit={{handleSubmit}}/>
-              </div>
-              <div>
               <th>Title</th>
               <td>...'Tahoe'</td>  
               <input type='text' defaultValue={" "}/>
-              </div>
-              <div>
               <th>Price</th>
               <td>...ex:$175.00</td>  
               <input type='currency' deaultValue={" "}/>
               </div>
+              <button type='submit' onSubmit={handleSubmit}>POST</button>
             </tr>
             </thead>
+           <label>Bulliten Board</label>
+           <input type='textarea'></input>
           </table>
     </div>
   );
