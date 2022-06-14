@@ -1,6 +1,10 @@
 import React, { useState } from "react";
 
 import useCustomForm from "../../hooks/useCustomForm";
+// import img from '/frontend/src/Imgs';
+import FileUpload from "../../components/fileupload";
+import { Link, NavLink } from "react-router-dom";
+
 
 const RennieDatabase = () => {
   const defaultValues = useState({
@@ -14,33 +18,33 @@ const RennieDatabase = () => {
     defaultValues,
   );
 
+  <NavLink /> 
   return (
     <div className="container">
-      <form className="form" onSubmit={handleSubmit}>
-        <body>
-            <ul>
-             <label> Types:{" "}</label>
-                <input type="text" value={formData.username} onChange={handleInputChange}/>
-             <label> Title:{" "}</label>
-                <input type="text" value={formData.firstName} onChange={handleInputChange}/>
-              <label> Price:{" "}</label>
-                 <input type="text" value={formData.lastName} onChange={handleInputChange}/>
-              <label> File:{" "}</label>
-                <file-XMLHttpRequestUpload type='file'></file-XMLHttpRequestUpload>
-            </ul>
-            <hr></hr>
-            <hr></hr>
-        </body>
+      <h> Welcome Rennie</h>
+        <h1>This Is Your Simple</h1>
+        <h2>Upload Station</h2>
+         <title>Rennie's Upload Center</title>
+          <form className="form" onSubmit={handleSubmit}>
+           <body>
+            <b>Types:{" "}</b><input type="text" value={formData.username} onChange={handleInputChange}/>
+             <b>Title:{" "}</b><input type="text" value={formData.firstName} onChange={handleInputChange}/>
+              <b>Price:{" "}</b><input type="text" value={formData.lastName} onChange={handleInputChange} /> 
+              <button>Sell!</button>  
+           </body>      
+          </form>
+            <b>
              <form>
-                <ol>
-                    <label>**Bullitien Board**</label>
-                    <textarea type='text' value={formData.New} onChange={handleInputChange} />
-                </ol>
+              <div>
+                <FileUpload> 
+                  
+                </FileUpload>
+              </div>
              </form>
-              <button>SELL!</button>
-            <hr></hr>
-            <hr></hr>
-      </form>
+            </b>
+          <footer className="container">
+            <b></b>
+          </footer>
     </div>
   );
 };

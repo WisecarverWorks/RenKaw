@@ -1,7 +1,5 @@
 footer {
   margin: auto;
-  background: rgb(2,0,36);
-  background: linear-gradient(180deg, rgba(248, 167, 96, 0.761) 39%, rgb(74, 241, 182) 100%);
   box-shadow: 4px 2px 5px gray;
   font: rgb(106, 105, 105);
   margin-bottom: auto;
@@ -13,8 +11,4 @@ footer {
   padding:.1rem;
   text-align: center;
   width: 100%;
-}
-p {
-  background: linear-gradient(180deg, rgba(248, 167, 96, 0.761) 39%, rgb(74, 241, 182) 100%);
-
 }

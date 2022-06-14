@@ -15,7 +15,7 @@ const HomePage = () => {
   useEffect(() => {
     const fetchMember = async () => {
       try {
-        let response = await axios.get("http://127.0.0.1:8000/api/members/", {
+        let response = await axios.get("http://127.0.0.1:8000/api/artwork/", {
           headers: {
             Authorization: "Bearer " + token,
           },

@@ -7,7 +7,6 @@ import HomePage from "./pages/HomePage/HomePage";
 import LoginPage from "./pages/LoginPage/LoginPage";
 import RegisterPage from "./pages/RegisterPage/RegisterPage";
 // Component Imports
-import Navbar from "./components/NavBar/NavBar";
 import Footer from "./components/Footer/Footer";
 
 // Util Imports
@@ -21,26 +20,24 @@ function App() {
 
     return (
       <div>
-        <Navbar />
+       <header>Ren's Art</header>
+       <title>Ren's Art</title>
         <Routes>
           <Route
             path="/"
             element={
               <PrivateRoute>
-                <ol>
-                  <RennieDatabase  />
-                </ol>
-                <ul>
+                  <RennieDatabase />
                   <HomePage />
-                </ul>
               </PrivateRoute>
-            }  
-          />
-          <Route path="/register" element={<RegisterPage />} />
+              
+             }  
+           />
+           <Route path="/register" element={<RegisterPage />} />
           <Route path="/login" element={<LoginPage />} />
-        </Routes>
+         </Routes>
         <Footer />
-      </div>
+       </div>
   );
 }
 
