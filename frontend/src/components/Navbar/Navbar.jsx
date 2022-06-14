@@ -2,7 +2,8 @@ import React from "react";
 import { useContext } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import AuthContext from "../../context/AuthContext";
-import "./NavBar.css";
+import { VechaiProvider, Button } from "@vechaiui/react";
+import "./Navbar.css";
 
 const Navbar = () => {
   const { logoutUser, user } = useContext(AuthContext);
@@ -10,18 +11,22 @@ const Navbar = () => {
   return (
     <div className="navBar">
       <ul>
-        <li className="brand">
+        <l className="brand">
           <Link to="/" style={{ textDecoration: "none", color: "white" }}>
-            <b>React/Django JWT</b>
           </Link>
-        </li>
-        <li>
+        </l>
+        <l>
           {user ? (
-            <button onClick={logoutUser}>Logout</button>
+            <VechaiProvider>
+              <Button onClick={logoutUser}>Logout</Button>
+            </VechaiProvider>
           ) : (
-            <button onClick={() => navigate("/login")}>Login</button>
+            <VechaiProvider>
+              <Button onClick={() => navigate("/login")}>Login</Button>
+              <Button onClick={() => navigate("/renniedatabase")}>Rennie</Button>
+            </VechaiProvider>
           )}
-        </li>
+        </l>
       </ul>
     </div>
   );

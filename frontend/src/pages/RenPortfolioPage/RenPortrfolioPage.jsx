@@ -1,7 +1,8 @@
 import React, { useState } from "react";
-import './RennieDatabase.css';
+import './Rennie.css';
 import useCustomForm from "../../hooks/useCustomForm";
-// import img from '/frontend/src/Imgs';
+
+import { VechaiProvider, Button } from "@vechaiui/react"
 
 
 const RennieDatabase = () => {
@@ -12,23 +13,15 @@ const RennieDatabase = () => {
 
 
   return (
-    <div className="container" >
-        <div/>
-        
-         <div/>
-          <div/>
-           <div>
-            <div>
-             <div>
-                    <div >
-                      
-                        <textarea draggable="true" type='text' onChange={[formData, handleInputChange]} onSubmit={handleSubmit} useState={" "}>Type a message to your customers here for a quick post</textarea>
-                      
-                    </div>
-               </div>
-              </div>
-             </div>
-            </div>
+    <div id="mydiv">
+      <h1>Bullitien Board</h1>
+      <p>This will post directly to your Users</p>
+      <textarea draggable="true" type='text' onChange={[formData, handleInputChange]} onSubmit={handleSubmit} useState={" "}>Type a message to your customers here for a quick post</textarea>
+      <VechaiProvider>
+       <Button>Post</Button>
+    ``</VechaiProvider>
+    </div>
+  
   );       
 };
 

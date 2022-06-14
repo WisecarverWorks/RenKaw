@@ -7,6 +7,7 @@ import LoginPage from "./pages/LoginPage/LoginPage";
 import RegisterPage from "./pages/RegisterPage/RegisterPage";
 // Component Imports
 import Footer from "./components/Footer/Footer";
+import Navbar from "./components/Navbar/Navbar";
 
 // Util Imports
 import PrivateRoute from "./utils/PrivateRoute";
@@ -19,6 +20,7 @@ function App() {
 
     return (
       <div>
+        <Navbar />
         <title>Ren's Art</title>
         <h1>Ren's Art</h1>
         <Routes>
@@ -27,12 +29,23 @@ function App() {
             element={
               <PrivateRoute >
                 <RennieDatabase />
-                <RenPortfolioPage />
               </PrivateRoute>
              }
            />
-           <Route path="/register" element={<RegisterPage />} />
+           <Routes>
+            <Route 
+              path="/"
+              element={
+              <PrivateRoute >
+                <RenPortfolioPage />
+              </PrivateRoute>
+              }
+            />
+           </Routes>
           <Route path="/login" element={<LoginPage />} />
+           <Route path="/register" element={<RegisterPage />} />
+           <Route path="/renniedatabase" element={<RennieDatabase />} />
+           <Route path="/renportfolio" element={<RenPortfolioPage />} />
          </Routes>
         <Footer />
        </div>

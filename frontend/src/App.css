@@ -14,12 +14,13 @@
 
 
 body {
-  background-image: url('./Imgs/download.png');
+
+  background-image: url('./Imgs/Lake.jpeg');
   background-position: center;
   background-color: transparent;
   background-repeat: no-repeat;
-  background-size: 1440px 1440px;
-  border: 2px solid black;
+  background-size: auto;
+  border: 3px solid black;
 }
 
 label {
@@ -42,8 +43,8 @@ p {
 
 button {
   background-color: transparent;
-  border: 2px solid rgb(169, 121, 200);
-  color: rgb(150, 255, 255);
+  border: 1px round rgb(163, 206, 240);
+  color: rgb(224, 210, 203);
   font-size: 1rem;
   font-family: inherit;
   max-width: 100px;
@@ -53,7 +54,7 @@ button {
 button:hover {
   cursor: pointer;
   color: rgb(219, 176, 176);
-  background-color: rgb(191, 35, 35);
+  background-color: rgb(163, 206, 240);
 }
 
 .container {
@@ -87,6 +88,4 @@ textarea {
   
 }
 
-div {
-  scroll-padding: ;
-}
+

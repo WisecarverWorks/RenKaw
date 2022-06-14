@@ -26,13 +26,6 @@ const LoginPage = () => {
         <meta name='viewport' content="width=device-width"></meta>
         <meta charset="utf-8"></meta>
         <title>Sign In - Ren's Art</title>
-        <meta name="next-head-count" content="3"></meta>
-        <link rel="preconnect" href="https://fonts.gstatic.com"></link>
-        <link rel="apple-touch-icon" sizes="180x180" href="/appIcons/apple-touch-icon.png"></link>
-        <link rel="icon" type="image/png" sizes="32x32" href="../../Imgs/download.png"></link>
-        <link rel="icon" type="image/png" sizes="16x16" href="../../Imgs/download.png"></link>
-        <meta name="theme-color" content="#ffffff"></meta>
-        <noscript data-n-css=""></noscript>
       </header>  
       <body>
          <form className="form" onSubmit={handleSubmit}>
@@ -44,7 +37,8 @@ const LoginPage = () => {
           <button>Login!</button>
         </form>
       </body>
-
+      <footer>
+      </footer>
     </div>
   );
 };

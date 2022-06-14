@@ -4,6 +4,8 @@
   "private": true,
   "dependencies": {
     "@material-ui/icons": "^4.11.3",
+    "@vechaiui/core": "^0.6.0",
+    "@vechaiui/react": "^0.2.2",
     "axios": "^0.26.0",
     "clean": "^4.0.2",
     "dependencies": "^0.0.1",
@@ -19,6 +21,7 @@
     "react-material-ui": "^0.0.1",
     "react-router-dom": "^6.2.1",
     "react-scripts": "5.0.0",
+    "react-textarea-autosize": "^8.3.4",
     "rich-text-editor": "^7.0.2",
     "styled-components": "^5.3.5",
     "web-vitals": "^2.1.4"
@@ -46,5 +49,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@tailwindcss/forms": "^0.5.2"
   }
 }

@@ -28,10 +28,14 @@ form.form {
 
 }
 body {
-
+    border: transparent;
 
     align-items: right;
     background-color: transparent;
     background-position: center;
     
- }
+}
+
+input {
+    color: silver;
+}
