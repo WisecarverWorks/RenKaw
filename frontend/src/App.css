@@ -4,36 +4,40 @@
 *,
 *::before,
 *::after {
-  
+  background-color: transparent;
+  background-size: auto;
   margin: auto;
-  font-size: .75rem;
-  padding: .5rem;
-  box-sizing: inherit;
+  font-size: .77rem;
+  padding: .77rem;
+  
 }
 
 
 body {
-  background-image: url('./Imgs/iohk-media-kit/iohk-symbol.png');
-  background-repeat: repeat;
-
+  background-image: url('./Imgs/download.png');
+  background-position: center;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-size: 1440px 1440px;
+  border: 2px solid black;
 }
 
+label {
+  margin: auto;
+  align-items: center; 
+}
 html {
-  background: linear-gradient(to left, #1d4350, #a43931); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
-  background-attachment: fixed;  
-  box-shadow: 4px 2px 5px gray;
-  color: rgb(106, 105, 105);
-  margin-bottom: auto;
-  font-size: 1rem;
-  padding: .25rem .25rem;
-  box-sizing: border-box;
-  font-family: "Ariel", sans-serif;
+  /* background: radial-gradient(circle, hsla(120, 93%, 84%, 1) 0%, hsla(185, 90%, 51%, 1) 100%); */
+  box-shadow: gray;
+  background-color: transparent;
+  color: #f0e4f7;
+  font-size: 1.0rem;
+  padding: .25rem;
 }
 
 p {
   
-  font-size: 20px;
+  font-size: 16px;
 }
 
 button {
@@ -53,30 +57,36 @@ button:hover {
 }
 
 .container {
-  background: linear-gradient(to right, #1d4350, #a43931); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
+  /* background: linear-gradient(to right, #4ea0bc, #a43931); */
+  
   margin: auto;
-  max-width: 600px;
-  overflow: auto;
+  max-width: 775px;
+  overflow: hidden;
   text-align: center;
 }
 
 .form {
   align-items: center;
+  grid-row-start: auto;
   display: flex;
-  flex-direction: column;
   justify-content: flex-end;
   gap: 1rem;
 }
-
+textarea {
+  
+  color: silver;
+}
 .form input {
   margin: auto;
   display: block;
-  width: 85%;
-  height: 15px;
-  margin: 15px;
-  padding: 5px 15px;
+  width: 50%;
+  height: 12px;
+  margin: 12px;
+  padding: 15px 15px;
   font-size: 12px;
   
 }
 
+div {
+  scroll-padding: ;
+}

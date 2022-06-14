@@ -3,11 +3,11 @@ footer {
   box-shadow: 4px 2px 5px gray;
   font: rgb(106, 105, 105);
   margin-bottom: auto;
-  padding: .66rem .66rem;
+  padding: 1rem 1rem;
   position: fixed;
-  bottom: 0;
+  bottom: 2rem;
   font-size: x-small;
-  left: 0;
+  left: 2rem;
   padding:.1rem;
   text-align: center;
   width: 100%;

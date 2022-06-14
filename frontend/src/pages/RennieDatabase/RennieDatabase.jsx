@@ -1,52 +1,46 @@
-import React, { useState } from "react";
+import React, {useState} from 'react';
 
-import useCustomForm from "../../hooks/useCustomForm";
-// import img from '/frontend/src/Imgs';
-import FileUpload from "../../components/fileupload";
-import { Link, NavLink } from "react-router-dom";
+import axios from 'axios';
 
+function FileUpload() {
 
-const RennieDatabase = () => {
-  const defaultValues = useState({
-    types: "",
-    title: "",
-    price: "",
+  const [file, setFile] = useState()
 
+  function handleChange(event) {setFile(event.target.files[0])}
+  function handleSubmit(event) {event.preventDefault()
+    
+    const url = 'http://localhost:3000/uploadFile/';
 
-  });
-  const [formData, handleInputChange, handleSubmit] = useCustomForm(
-    defaultValues,
-  );
-
-  <NavLink /> 
+    const formData = new FormData(); 
+    formData.append('file', file);
+    formData.append('fileName', file.name);
+    const config = {headers: {
+        'content-type': 'multipart/form-data',
+      },
+    };
+    axios.post(url, formData, config).then((response) => {
+      console.log(response.data);
+    });
+  }
   return (
-    <div className="container">
-      <h> Welcome Rennie</h>
-        <h1>This Is Your Simple</h1>
-        <h2>Upload Station</h2>
-         <title>Rennie's Upload Center</title>
-          <form className="form" onSubmit={handleSubmit}>
-           <body>
-            <b>Types:{" "}</b><input type="text" value={formData.username} onChange={handleInputChange}/>
-             <b>Title:{" "}</b><input type="text" value={formData.firstName} onChange={handleInputChange}/>
-              <b>Price:{" "}</b><input type="text" value={formData.lastName} onChange={handleInputChange} /> 
-              <button>Sell!</button>  
-           </body>      
-          </form>
-            <b>
-             <form>
-              <div>
-                <FileUpload> 
-                  
-                </FileUpload>
-              </div>
-             </form>
-            </b>
-          <footer className="container">
-            <b></b>
-          </footer>
+    <div className="FileUpload" anchor>
+        <form onSubmit={handleSubmit}>
+          <td>React File Upload</td>
+          <input type="file" onChange={handleChange}/>
+          <button type="submit">Upload</button>
+        </form>
+        <form onSubmit={handleSubmit}>
+          <td>React File Upload</td>
+          <input type="file" onChange={handleChange}/>
+          <button type="submit">Upload</button>
+        </form>
+        <form onSubmit={handleSubmit}>
+          <td>React File Upload</td>
+          <input type="file" onChange={handleChange}/>
+          <button type="submit">Upload</button>
+        </form>
+        
     </div>
   );
-};
-
-export default RennieDatabase;
+}
+export default FileUpload;
