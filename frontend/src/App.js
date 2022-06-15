@@ -28,20 +28,10 @@ function App() {
             path="/"
             element={
               <PrivateRoute >
-                <RennieDatabase />
-              </PrivateRoute>
-             }
-           />
-           <Routes>
-            <Route 
-              path="/"
-              element={
-              <PrivateRoute >
                 <RenPortfolioPage />
               </PrivateRoute>
-              }
-            />
-           </Routes>
+            }
+          />
           <Route path="/login" element={<LoginPage />} />
            <Route path="/register" element={<RegisterPage />} />
            <Route path="/renniedatabase" element={<RennieDatabase />} />
