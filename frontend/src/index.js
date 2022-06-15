@@ -1,25 +1,20 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import App from "./App";
-import { AuthProvider } from "./context/AuthContext";
 import { BrowserRouter as Router } from "react-router-dom";
 import { module } from "uuid";
+import App from "./App";
+import { AuthProvider } from "./context/AuthContext";
 
 ////<===========================
-import { createRoot } from 'react-dom/client';
 
 // import i18n (needs to be bundled ;))
-import './i18n';
+// import i18n (needs to be bundled ;))
+import '../src/components/i18next/i18n';
 
-const root = createRoot(document.getElementById('root'))
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
+
 ////<============================ ReactI18next import for testing ============
   
-const svgToDataUri = require('mini-svg-data-uri')
+  const svgToDataUri = require('mini-svg-data-uri')
   
   const plugin = require('tailwindcss/plugin')
   
@@ -32,6 +27,7 @@ const svgToDataUri = require('mini-svg-data-uri')
   const { spacing, borderWidth, borderRadius } = defaultTheme
 
   const forms = plugin.withOptions(function (options = { strategy: undefined }) {
+   
     return function ({ addBase, addComponents, theme }) {
       const strategy = options.strategy === undefined ? ['base', 'class'] : [options.strategy]
 

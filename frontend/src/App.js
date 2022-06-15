@@ -1,6 +1,7 @@
 // General Imports
 import { Routes, Route } from "react-router-dom";
 import "./App.css";
+import { ReactDOM } from "react";
 
 // Pages Imports
 import LoginPage from "./pages/LoginPage/LoginPage";
@@ -13,7 +14,6 @@ import Navbar from "./components/Navbar/Navbar";
 import PrivateRoute from "./utils/PrivateRoute";
 import RennieDatabase from "./pages/RennieDatabase/RennieDatabase";
 import RenPortfolioPage from "./pages/RenPortfolioPage/RenPortrfolioPage";
-
 
 
 function App() {
@@ -43,3 +43,4 @@ function App() {
 }
 
 export default App;
+
