@@ -19,10 +19,21 @@ i18n
     resources: {
       en: {
         translation: {
-          // here translations are placed...
+            description: {
+                part1: 'Edit <1>src/App.js</1> and save to reload.',
+                part2: 'Learn React'
+              }
+            }
+          },
+          de: {
+            translation: {
+              description: {
+                part1: 'Ändere <1>src/App.js</1> und speichere um neu zu laden.',
+                part2: 'Lerne React'
+              }
+            }
         }
-      }
-    }
-  });
+       }
+    });
 
 export default i18n;

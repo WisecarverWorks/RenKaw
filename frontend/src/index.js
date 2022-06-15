@@ -4,6 +4,20 @@ import App from "./App";
 import { AuthProvider } from "./context/AuthContext";
 import { BrowserRouter as Router } from "react-router-dom";
 import { module } from "uuid";
+
+////<===========================
+import { createRoot } from 'react-dom/client';
+
+// import i18n (needs to be bundled ;))
+import './i18n';
+
+const root = createRoot(document.getElementById('root'))
+root.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
+);
+////<============================ ReactI18next import for testing ============
   
 const svgToDataUri = require('mini-svg-data-uri')
   
