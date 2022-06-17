@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const portfolioForm = (initialValues = {}, onSubmit) => {
+const FileUploadform = (initialValues = {}, onSubmit) => {
     const [formData, setFormValues] = useState(initialValues);
     
     const handleInputChange = (e) => {
@@ -24,4 +24,4 @@ const portfolioForm = (initialValues = {}, onSubmit) => {
     return [formData, handleInputChange, handleSubmit, reset];
 };
 
-export default portfolioForm;
+export default FileUploadform;
