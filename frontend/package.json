@@ -3,29 +3,15 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@material-ui/icons": "^4.11.3",
-    "@vechaiui/core": "^0.6.0",
-    "@vechaiui/react": "^0.2.2",
+    "@testing-library/jest-dom": "^5.16.2",
+    "@testing-library/react": "^12.1.2",
+    "@testing-library/user-event": "^13.5.0",
     "axios": "^0.26.0",
-    "clean": "^4.0.2",
-    "dependencies": "^0.0.1",
-    "filestack-js": "^3.25.0",
-    "i18next": "^21.8.9",
-    "i18next-browser-languagedetector": "^6.1.4",
-    "i18next-chained-backend": "^3.0.2",
     "jwt-decode": "^3.1.2",
-    "npm": "^8.12.1",
     "react": "^17.0.2",
-    "react-bootstrap": "^2.4.0",
     "react-dom": "^17.0.2",
-    "react-dropzone": "^14.2.1",
-    "react-i18next": "^11.17.2",
-    "react-material-ui": "^0.0.1",
     "react-router-dom": "^6.2.1",
     "react-scripts": "5.0.0",
-    "react-textarea-autosize": "^8.3.4",
-    "rich-text-editor": "^7.0.2",
-    "styled-components": "^5.3.5",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
@@ -51,8 +37,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "devDependencies": {
-    "@tailwindcss/forms": "^0.5.2"
   }
 }

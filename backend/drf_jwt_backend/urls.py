@@ -20,5 +20,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/auth/', include('authentication.urls')),
     path('api/cars/', include('cars.urls')),
-    path('api/artwork/', include('artwork.urls')),
+    path('api/artcollection/', include('artcollection.urls')), ## New url for art collection app, used for Admin upload. 
 ]

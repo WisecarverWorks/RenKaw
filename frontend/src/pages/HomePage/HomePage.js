@@ -1,7 +1,6 @@
 import React from "react";
 import { useEffect, useState } from "react";
 import useAuth from "../../hooks/useAuth";
-import { Link } from "react"
 
 import axios from "axios";
 
@@ -10,32 +9,30 @@ const HomePage = () => {
   // The "token" value is the JWT token that you will send in the header of any request requiring authentication
   //TODO: Add an AddCars Page to add a car for a logged in user's garage
   const [user, token] = useAuth();
-  const [artwork, setArtwork] = useState([]);
+  const [cars, setCars] = useState([]);
 
   useEffect(() => {
-    const fetchArtwork = async () => {
+    const fetchCars = async () => {
       try {
-        let response = await axios.get("http://127.0.0.1:8000/api/artwork/", {
+        let response = await axios.get("http://127.0.0.1:8000/api/cars/", {
           headers: {
-            Authorization: "Allow any",
+            Authorization: "Bearer " + token,
           },
         });
-        setArtwork(response.data);
+        setCars(response.data);
       } catch (error) {
-        console.log(error.message);
+        console.log(error.response.data);
       }
     };
-    fetchArtwork();
-  },);
-
-  
+    fetchCars();
+  }, [token]);
   return (
     <div className="container">
-      <h1>{user.username} Welcome to your HomePage!</h1>
-      {artwork &&
-        artwork.map((artworks) => (
-          <p key={artworks.id}>
-            {artworks.sets} {artworks.title} {artworks.price}
+      <h1>Home Page for {user.username}!</h1>
+      {cars &&
+        cars.map((car) => (
+          <p key={car.id}>
+            {car.year} {car.model} {car.make}
           </p>
         ))}
     </div>
