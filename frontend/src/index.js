@@ -9,7 +9,8 @@ import { AuthProvider } from "./context/AuthContext";
 
 // import i18n (needs to be bundled ;))
 // import i18n (needs to be bundled ;))
-import '../src/components/i18next/i18n';
+// import '../src/components/i18next/chained-backend';
+// import '../src/components/i18next/i18next';
 
 
 ////<============================ ReactI18next import for testing ============
