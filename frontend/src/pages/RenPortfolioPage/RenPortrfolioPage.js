@@ -1,8 +1,8 @@
 import React, { useContext } from "react";
+import './RenPortfolioPage.css';
 import AuthContext from "../../context/AuthContext";
 import useBullitienForm from "../../hooks/useBullitienForm";
 
-import { VechaiProvider, Button } from "@vechaiui/react"
 
 
 const RennieDatabase = () => {
@@ -18,17 +18,11 @@ const RennieDatabase = () => {
  
   return (
     <div className="container" id="Bullitiendiv">
-              <h1>Bullitien Board</h1>
+      <h2>Bullitien Board</h2>
       <p>This will post directly to your Users</p>
-      <textarea draggable="true" type='text' onChange={[formData, handleInputChange]} onSubmit={handleSubmit} useState={" "}>Type a message to your customers here for a quick post</textarea>
-      <VechaiProvider>
-       <Button>Post</Button>
-    ``</VechaiProvider>
-        <form className="form" onSubmit={handleSubmit}>
-            <label>Post Name{" "}<input type="textarea" name='postname' value={formData.postname} onChange={handleInputChange}/></label>
-                
-        </form>
-
+     <form className="form" onSubmit={handleSubmit}>
+        <label>Post Name{" "}<input type="textarea" name='postname' value={formData.postname} onChange={handleInputChange}/></label>
+        <textarea draggable="true" type='text' onChange={[formData, handleInputChange]} onSubmit={handleSubmit} useState={" "}>Type a message to your customers here for a quick post</textarea>
         <form action="/action_page.php">
         <p style={{ fontSize: "12px" }}>
                 NOTE: All additions will be uploaded to the backend and stored. When needed speak with your admin to recall all entries.
@@ -39,7 +33,7 @@ const RennieDatabase = () => {
             <input type="file" id="myFile" name="filename"></input>
             <input type="submit"></input>
         </form>
-
+     </form>
     </div>
   
   );       

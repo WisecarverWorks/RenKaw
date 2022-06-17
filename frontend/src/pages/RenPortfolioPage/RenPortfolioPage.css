@@ -1,14 +1,19 @@
 div {
-    text-emphasis-color: silver;
+    text-emphasis-color: rgb(171, 205, 227);
     background-color: transparent;
     scroll-padding:.65rem;
     margin: auto;
 
 }
 h1 {
-    background-color: transparent;
+    -webkit-text-fill-color: rgb(255, 255, 255);
+    text-align: Left;
+    font-size: x-large;
 
-    text-align: right;
+}
+h2 {
+    -webkit-text-fill-color: rgb(255, 255, 255);
+    text-align: Center;
     font-size: x-large;
 
 }

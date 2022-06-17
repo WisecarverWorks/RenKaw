@@ -18,7 +18,7 @@ def getArtwork(request):
 @permission_classes(IsAuthenticated)
 def getAllArtwork(request):
     print(
-        'Artwork ', f"{request.artwork.id} {request.artwork.title} {request.artwork.price}")
+        'Artwork ', f"{request.artwork.sets} {request.artwork.title} {request.artwork.price}")
     if request.method == 'POST':
         serializer = ArtworkSerializer(data=request.data)
         if serializer.is_valid():
@@ -26,6 +26,6 @@ def getAllArtwork(request):
             return Response(serializer.data, status=status.HTTP_201_CREATED)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
     elif request.method == 'GET':
-        artwork = Artwork.objects.filter(artwork_id=request.artwork.id)
+        artwork = Artwork.objects.filter(artwork=request.artwork.sets)
         serializer = ArtworkSerializer(artwork, many=True)
         return Respons(serializer.data)

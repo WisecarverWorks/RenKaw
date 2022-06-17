@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import { BrowserRouter as Router } from "react-router-dom";
+// import { Routes, Route } from "react-router-dom";
 import { module } from "uuid";
 import App from "./App";
 import { AuthProvider } from "./context/AuthContext";
@@ -13,6 +14,11 @@ import { AuthProvider } from "./context/AuthContext";
 // import '../src/components/i18next/i18next';
 
 
+// import LoginPage from "./pages/LoginPage/LoginPage";
+// import RegisterPage from "./pages/RegisterPage/RegisterPage";
+// import HomePage from "./pages/HomePage/HomePage";
+// import RennieDatabasePage from "./pages/RennieDatabasePage/RennieDatabasePage";
+// import RenPortfolioPage from "./pages/RenPortfolioPage/RenPortrfolioPage";
 ////<============================ ReactI18next import for testing ============
   
   const svgToDataUri = require('mini-svg-data-uri')

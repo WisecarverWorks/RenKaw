@@ -25,17 +25,22 @@ function FileUpload() {
   return (
     <div className="FileUpload" anchor>
         <form onSubmit={handleSubmit}>
-          <td>React File Upload</td>
+          <td>Image File Upload</td>
           <input type="file" onChange={handleChange}/>
           <button type="submit">Upload</button>
         </form>
         <form onSubmit={handleSubmit}>
-          <td>React File Upload</td>
+          <td>Poem File Upload</td>
           <input type="file" onChange={handleChange}/>
           <button type="submit">Upload</button>
         </form>
         <form onSubmit={handleSubmit}>
-          <td>React File Upload</td>
+          <td>Custom File Upload</td>
+          <input type="file" onChange={handleChange}/>
+          <button type="submit">Upload</button>
+        </form>
+        <form onSubmit={handleSubmit}>
+          <td>RENNIE CUSTOMER ASSESSMENT</td>
           <input type="file" onChange={handleChange}/>
           <button type="submit">Upload</button>
         </form>
