@@ -3,5 +3,5 @@ from artwork import views
 
 urlpatterns = [
     path('', views.getArtwork),
-    path('all/', views.getAllArtwork),
+    path('new/', views.getAllArtwork),
 ]

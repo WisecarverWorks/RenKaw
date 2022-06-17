@@ -4,5 +4,5 @@ from .models import Artwork
 class ArtworkSerializer(serializers.ModelSerializer):
     class Meta:
         model = Artwork
-        fields = ['types','title','price']
+        fields = ['sets','title','price']
         depth = 1 
