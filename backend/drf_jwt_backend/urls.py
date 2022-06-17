@@ -21,4 +21,6 @@ urlpatterns = [
     path('api/auth/', include('authentication.urls')),
     path('api/cars/', include('cars.urls')),
     path('api/artcollection/', include('artcollection.urls')), ## New url for art collection app, used for Admin upload. 
+    path('api/assessment/', include('assessment.urls')), ## New url for art collection app, used for Admin upload. 
+    path('api/bulletinupload/', include('bulletinupload.urls')), ## New url for art collection app, used for Admin upload. 
 ]
