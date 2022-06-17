@@ -1,9 +1,14 @@
 # from django.db import models
 from django.contrib.auth.models import AbstractUser
+from django.db import models
 
 
 class User(AbstractUser):
-    pass
+    USER_TYPE_CHOICES = (
+        (1, 'admin'),
+        (1, 'customer'),
+        (1, 'superuser'),
+    )
     '''
     This is a custom version of the built in User class
     It contains all of the built in fields and functionality of the standard User
@@ -13,4 +18,8 @@ class User(AbstractUser):
     '''
     # Example (note import of models above that is commented out)
     # this will add a column to the user table
-    # is_student = models.BooleanField('student status', default=False)
+    user_type = models.PositiveSmallIntegerField(choices=USER_TYPE_CHOICES)
+    
+class Customer(models.Model):
+     user = models.OneToOneField(User, on_delete=models.CASCADE, primary_key=True)
+#     assessments = models.ManyToManyField(Assessment, through='Assessments')
