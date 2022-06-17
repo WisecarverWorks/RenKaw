@@ -9,16 +9,26 @@ from .serializers import BulletinUploadSerializer
 
 @api_view(['GET'])
 @permission_classes([AllowAny])
-
+def get_all_bulletins(request):
+    bulletins = BulletinUpload.objects.all()
+    serializer = BulletinUploadSerializer(bulletins)
+    return Response(serializer.data)
 
 
 @api_view(['GET', 'POST'])
 @permission_classes([IsAuthenticated])
-def user_cars(request):
+def user_bulletin(request):
     print(
         'User ', f"{request.user.id} {request.user.email} {request.user.username}")
     if request.method == 'POST':
-        serializer = CarSerializer(data=request.data)
+        serializer = BulletinUploadSerializer(data=request.data)
         if serializer.is_valid():
             serializer.save(user=request.user)
             return Response(serializer.data, status=status.HTTP_201_CREATED)
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+    elif request.method == 'GET':
+        bulletins = BulletinUpload.objects.filter(user_id=request.user.id)
+        serializer = BulletinUploadSerializer(assessments)
+        return Response(serializer.data)
+    
+    # End
