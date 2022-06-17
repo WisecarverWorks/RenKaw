@@ -1,13 +1,26 @@
 import React, {useState} from 'react';
+import DisplayPosts from "./Component/DisplayPosts/DisplayPosts";
+import CreatePost from "./Component/CreatePost/CreatePost";
+import Navbar from '../../components/Navbar/Navbar';
+
 
 import axios from 'axios';
 
+import { Container, Row, Col } from 'react';
+
 function FileUpload() {
+  
+    const [file, setFile] = useState()
+    const [posts, setPosts] = useState([]);
 
-  const [file, setFile] = useState()
-
+  function createPost(myPost) {
+    let allPosts= [...posts, myPost];
+    setPosts(allPosts);
+}
   function handleChange(event) {setFile(event.target.files[0])}
   function handleSubmit(event) {event.preventDefault()
+
+      }
     
     const url = 'http://localhost:3000/uploadFile/';
 
@@ -21,9 +34,24 @@ function FileUpload() {
     axios.post(url, formData, config).then((response) => {
       console.log(response.data);
     });
-  }
-  return (
-    <div className="FileUpload" anchor>
+  
+    return (
+    <div className="FileUpload">
+        <div className='App'>
+            <Navbar />
+            <Container>
+                <Row>
+                   <Col>
+                    {" "}
+                    <CreatePost createPost={createPost} />
+                   </Col>
+                   <Col>
+                    {" "}
+                    <DisplayPosts posts={posts} />
+                   </Col>
+                </Row>
+            </Container>
+        </div>
         <form onSubmit={handleSubmit}>
           <td>Image File Upload</td>
           <input type="file" onChange={handleChange}/>
