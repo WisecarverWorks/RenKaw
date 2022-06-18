@@ -7,5 +7,7 @@ from .models import Assessment
 class AssessmentSerializer(serializers.ModelSerializer):
     class Meta:
         model = Assessment
-        fields = ['id', 'questions', 'date']
+        fields = ['id', 'questions', 'date', 'assessment_id']
         depth = 1
+        
+    assessment_id = serializers.IntegerField(write_only=True)

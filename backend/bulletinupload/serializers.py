@@ -7,7 +7,9 @@ from .models import BulletinUpload
 class BulletinUploadSerializer(serializers.ModelSerializer):
     class Meta:
         model = BulletinUpload
-        fields = ['id', 'date']
+        fields = ['id', 'date', 'bulletin_id']
         depth = 1
         
         # End 
+        
+    bulletin_id = serializers.IntegerField(write_only=True)

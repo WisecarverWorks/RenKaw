@@ -7,7 +7,8 @@ from .models import Art
 class ArtSerializer(serializers.ModelSerializer):
     class Meta:
         model = Art
-        fields = ['time', 'title', 'price']
+        fields = ['time', 'title', 'price', 'art_id']
         depth = 1
         
         # End
+    art_id = serializers.IntegerField(write_only=True)
