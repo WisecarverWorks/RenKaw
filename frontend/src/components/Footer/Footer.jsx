@@ -1,20 +1,24 @@
 import React from 'react';
-import { Button, Container } from "semantic-ui-react";
-import { Link } from 'react-router-dom';
-import "./Footer.css";
+// import { Button, Container } from "semantic-ui-react";
+// import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
     <div>
-      
       <footer>
-      <Container>
-        <Button ><Link path="/home"></Link>Home</Button>
-        <Button ><Link  path="/assessment"></Link>Quiz</Button>
-        <Button ><Link to="/bpp"></Link>Porftolio</Button>
-      </Container>
+        <form>
+
+        <label for="'routing">Links
+        <select name="links" id="links">
+          <option value="Google Drive">Google Drive</option><link to='https://drive.google.com/drive/folders/1epUiV6uJDu5LKwNV7gQeLuwK41G4BXNP?usp=sharing'/>
+          <option value="Home">Home</option><link to='../../pages/HomePage'/>
+          <option value="Assessment">Assessments</option><link to='../../pages/AssessmentPage'/>
+          <option value="Portfolio">Portfolio</option><link to='../../pages/BuisnessPortfolioPage'/>
+        </select>
+        </label>
+        <button type='submit'>GO</button>
+        </form>
       </footer>
-      
     </div>
   );
 };

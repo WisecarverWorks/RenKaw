@@ -7,11 +7,49 @@
   padding: 0;
   box-sizing: inherit;
 }
+ul {
+  display: flex;
+  justify-content: space-between;
+  list-style-type: georgian;
+}
 
+li {
+  font-size: 20;
+}
+
+.navBar button:hover {
+  background: transparent;
+  color: rgb(232, 238, 244);
+  cursor: pointer;
+}
+button {
+  padding: 10px;
+  background-blend-mode: color-burn;
+  border-radius: 240px;
+  border-width: 50;
+}
+.navBar button {
+  background-image: url('./Images/ralph.jpg');
+  background-size: cover;
+  border: 1px solid rgb(42, 202, 138);
+  color: white;
+  padding: 0.4rem 0.5rem;
+}
+.navBar {
+  background-image: url('./Images/markus.jpg');
+  background-size: contain;
+  box-shadow: 4px 2px 5px blue;
+  color: white;
+  margin-bottom: 1rem;
+  padding: 1.5rem 2rem;
+}
 html {
+  background-image: url('./Images/ralph.jpg');
+  height: fit-content;
+  width: fit-content;
   grid-template-columns: min-content;
   box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
+  font-family: sans-serif;
 }
 
 p {
@@ -56,4 +94,18 @@ button:hover {
   margin: 5px;
   padding: 3px 7px;
   font-size: 17px;
+}
+footer {
+  position:fixed;
+  background-image: url('./Images/engin.jpg');
+  align-content: center;
+  bottom: 0;
+  font-size: 1rem;
+  padding: 1.5rem;
+  right: 0;
+  text-align: center;
+  width: 100%;
+}
+button {
+  background-size: auto;
 }
