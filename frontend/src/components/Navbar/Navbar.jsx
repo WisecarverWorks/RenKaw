@@ -9,11 +9,23 @@ const Navbar = () => {
   const navigate = useNavigate();
   return (
     <div className="navBar">
-      
+      <ul>
+        <li className="brand">
+          <Link to="/bpp" style={{ textDecoration: "none", color: "white"}}>
+            <button type="link" width="auto">Rennie</button>
+          </Link>
+          <Link to="/assessment" style={{ textDecoration: "none", color: "white"}}>
+            <button text-align="left" type="link">Posts</button>
+          </Link>
+          <Link to="/artviewer" style={{ textDecoration: "none", color: "white"}}>
+            <button type="link">Art</button>
+          </Link>
+        </li>
+      </ul>
       <ul>
         <li className="brand">
           <Link to="/" style={{ textDecoration: "none", color: "white" }}>
-            <b>React/Django JWT</b>
+            <b></b>
           </Link>
         </li>
         <li>

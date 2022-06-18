@@ -14,6 +14,7 @@ import Footer from "./components/Footer/Footer";
 
 // Util Imports
 import PrivateRoute from "./utils/PrivateRoute";
+import AssessmentPage from "./pages/AssessmentPage/AssessmentPage";
 
 function App() {
   return (
@@ -21,7 +22,7 @@ function App() {
       <Navbar />
       <Routes>
         <Route
-          path="/"
+          path="/" exact
           element={
             <PrivateRoute>
               <HomePage />
@@ -32,6 +33,7 @@ function App() {
         <Route path="/register" element={<RegisterPage />} />
         <Route path="/login" element={<LoginPage />} />
         <Route path="/bpp" element={<BPPRenniePage />} />
+        <Route path="/assessment" element={<AssessmentPage />} />
       </Routes>
       <Footer />
     </div>
