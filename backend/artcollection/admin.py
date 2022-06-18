@@ -1,6 +1,6 @@
 from django.contrib import admin
 from .models import Art
 # Register your models here.
-admin.site.registration(Art)
+admin.site.register(Art)
 
 # End 

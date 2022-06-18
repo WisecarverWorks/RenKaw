@@ -6,6 +6,7 @@ import "./App.css";
 import HomePage from "./pages/HomePage/HomePage";
 import LoginPage from "./pages/LoginPage/LoginPage";
 import RegisterPage from "./pages/RegisterPage/RegisterPage";
+import BPPRenniePage from "./pages/BPPRenniePage/BPPRenniePage";
 
 // Component Imports
 import Navbar from "./components/NavBar/NavBar";
@@ -24,11 +25,13 @@ function App() {
           element={
             <PrivateRoute>
               <HomePage />
+              <BPPRenniePage />
             </PrivateRoute>
           }
         />
         <Route path="/register" element={<RegisterPage />} />
         <Route path="/login" element={<LoginPage />} />
+        <Route path="/bpp" element={<BPPRenniePage />} />
       </Routes>
       <Footer />
     </div>

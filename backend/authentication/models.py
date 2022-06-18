@@ -18,8 +18,8 @@ class User(AbstractUser):
     '''
     # Example (note import of models above that is commented out)
     # this will add a column to the user table
-    user_type = models.PositiveSmallIntegerField(choices=USER_TYPE_CHOICES)
+    # user_type = models.PositiveSmallIntegerField(choices=USER_TYPE_CHOICES)
     
 class Customer(models.Model):
-     user = models.OneToOneField(User, on_delete=models.CASCADE, primary_key=True)
+    user = models.OneToOneField(User, on_delete=models.CASCADE, primary_key=True)
 #     assessments = models.ManyToManyField(Assessment, through='Assessments')

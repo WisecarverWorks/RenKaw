@@ -6,7 +6,7 @@ from .models import BulletinUpload
 
 class BulletinUploadSerializer(serializers.ModelSerializer):
     class Meta:
-        model = BulletinUplaod
+        model = BulletinUpload
         fields = ['id', 'date']
         depth = 1
         

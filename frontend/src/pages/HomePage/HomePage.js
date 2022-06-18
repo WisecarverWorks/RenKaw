@@ -1,6 +1,7 @@
 import React from "react";
 import { useEffect, useState } from "react";
 import useAuth from "../../hooks/useAuth";
+import { Link } from "react-router-dom";
 
 import axios from "axios";
 
@@ -9,32 +10,35 @@ const HomePage = () => {
   // The "token" value is the JWT token that you will send in the header of any request requiring authentication
   //TODO: Add an AddCars Page to add a car for a logged in user's garage
   const [user, token] = useAuth();
-  const [cars, setCars] = useState([]);
+  const [art, setArt] = useState([]);
 
   useEffect(() => {
-    const fetchCars = async () => {
+    const fetchArt = async () => {
       try {
-        let response = await axios.get("http://127.0.0.1:8000/api/cars/", {
+        let response = await axios.get("http://127.0.0.1:8000/api/artcollection/", {
           headers: {
             Authorization: "Bearer " + token,
           },
         });
-        setCars(response.data);
+        setArt(response.data);
       } catch (error) {
         console.log(error.response.data);
       }
     };
-    fetchCars();
+    fetchArt();
   }, [token]);
   return (
     <div className="container">
       <h1>Home Page for {user.username}!</h1>
-      {cars &&
-        cars.map((car) => (
-          <p key={car.id}>
-            {car.year} {car.model} {car.make}
+      {art &&
+        art.map((art) => (
+          <p key={art.id}>
+            {art.title} {art.price} {art.time}
           </p>
         ))}
+        <Link to="/register">Click to register!</Link>
+        <Link to="/assessment">Click to assessments!</Link>
+        <Link to="/bpp">Click to bulletin!</Link>
     </div>
   );
 };

@@ -8,7 +8,7 @@ from .serializers import AssessmentSerializer
 
 @api_view(['GET'])
 @permission_classes([AllowAny])
-def get_all_assessment(request):
+def get_all_assessments(request):
     assessments = Assessment.objects.all()
     serializer = AssessmentSerializer(assessments)
     return Response(serializer.data)
