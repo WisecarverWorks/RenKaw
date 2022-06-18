@@ -9,6 +9,7 @@
 }
 
 html {
+  grid-template-columns: min-content;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
@@ -19,7 +20,7 @@ p {
 
 button {
   background-color: transparent;
-  border: 2px solid steelblue;
+  border: 1px dotted steelblue;
   color: steelblue;
   font-size: 1rem;
   font-family: inherit;
@@ -35,7 +36,7 @@ button:hover {
 
 .container {
   margin: 0 auto;
-  max-width: 600px;
+  max-width: px;
   overflow: auto;
   text-align: center;
 }

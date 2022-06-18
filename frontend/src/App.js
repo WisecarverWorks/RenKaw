@@ -6,15 +6,13 @@ import "./App.css";
 import HomePage from "./pages/HomePage/HomePage";
 import LoginPage from "./pages/LoginPage/LoginPage";
 import RegisterPage from "./pages/RegisterPage/RegisterPage";
-import BPPRenniePage from "./pages/BPPRenniePage/BPPRenniePage";
-
+import BuisnessPortfolioPage from './pages/BuisnessPortfolioPage/BuisnessPortfilioPage';
 // Component Imports
 import Navbar from "./components/NavBar/NavBar";
 import Footer from "./components/Footer/Footer";
 
 // Util Imports
 import PrivateRoute from "./utils/PrivateRoute";
-import AssessmentPage from "./pages/AssessmentPage/AssessmentPage";
 
 function App() {
   return (
@@ -22,18 +20,17 @@ function App() {
       <Navbar />
       <Routes>
         <Route
-          path="/" exact
+          path="/"
           element={
             <PrivateRoute>
               <HomePage />
-              <BPPRenniePage />
             </PrivateRoute>
           }
         />
         <Route path="/register" element={<RegisterPage />} />
+        {/* <Route path="/assessment" element={<AssessmentPage />} /> */}
+        <Route path="/bpp" element={<BuisnessPortfolioPage />} />
         <Route path="/login" element={<LoginPage />} />
-        <Route path="/bpp" element={<BPPRenniePage />} />
-        <Route path="/assessment" element={<AssessmentPage />} />
       </Routes>
       <Footer />
     </div>
