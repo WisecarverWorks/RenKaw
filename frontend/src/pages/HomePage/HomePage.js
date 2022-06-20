@@ -1,9 +1,12 @@
 import React from "react";
 import { useEffect, useState } from "react";
 import useAuth from "../../hooks/useAuth";
-import { Link } from "react"
+// import { Link } from "react"
 
+import "./HomePage.css";
+import "../AdminPage/AdminPage";
 import axios from "axios";
+
 
 const HomePage = () => {
   // The "user" value from this Hook contains the decoded logged in user information (username, first name, id)
@@ -30,14 +33,8 @@ const HomePage = () => {
 
   
   return (
-    <div className="container">
-      <h1>{user.username} Welcome to your HomePage!</h1>
-      {artwork &&
-        artwork.map((artworks) => (
-          <p key={artworks.id}>
-            {artworks.sets} {artworks.title} {artworks.price}
-          </p>
-        ))}
+    <div className="container-fluid">
+
     </div>
   );
 };

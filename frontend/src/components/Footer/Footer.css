@@ -1,14 +1,14 @@
 footer {
-  margin: auto;
-  box-shadow: 4px 2px 5px gray;
-  font: rgb(106, 105, 105);
-  margin-bottom: auto;
-  padding: 1rem 1rem;
+  background-image: url("./Bottom Horizontal.jpg");
+  background-position: 0;
+  background-repeat: no-repeat;
+  background-size: fill;
   position: fixed;
-  bottom: 2rem;
-  font-size: x-small;
-  left: 2rem;
-  padding:.1rem;
+  color: silver;
+  bottom: 0;
+  box-shadow: 4px 2px 5px rgb(255, 251, 251);  font-size: 1.2rem;
+  left: 0;
+  padding: .0rem;
   text-align: center;
   width: 100%;
 }

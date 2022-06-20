@@ -3,41 +3,40 @@ import { Routes, Route } from "react-router-dom";
 import "./App.css";
 
 // Pages Imports
+import HomePage from "./pages/HomePage/HomePage";
 import LoginPage from "./pages/LoginPage/LoginPage";
 import RegisterPage from "./pages/RegisterPage/RegisterPage";
+import AdminPage from "./pages/AdminPage/AdminPage";
 // Component Imports
+import Navbar from "./components/NavBar/NavBar";
 import Footer from "./components/Footer/Footer";
-import Navbar from "./components/Navbar/Navbar";
 
 // Util Imports
 import PrivateRoute from "./utils/PrivateRoute";
-import HomePage from "./pages/HomePage/HomePage";
-import RennieDatabasePage from "./pages/RennieDatabasePage/RennieDatabasePage";
-import RenPortfolioPage from "./pages/RenPortfolioPage/RenPortrfolioPage";
+import '../node_modules/react-draft-wysiwyg/dist/react-draft-wysiwyg.css';
 
 
 function App() {
-
-    return (
-      <div>
-        <Navbar />
-        <title>Ren's Art</title>
-        <h1>Ren's Art</h1>
-        <Routes>
-          <Route path="/" element={
+  return (
+    <div>
+      <Navbar />
+      <Routes>
+        <Route
+          path="/"
+          element={
             <PrivateRoute>
-                <HomePage />
-            </PrivateRoute>} 
-            /> 
-          <Route path="/login" element={<LoginPage />} />
-          <Route path="/register" element={<RegisterPage />} />
-          <Route path="/portfolio" element={<RenPortfolioPage />} />
-          <Route path="/database" element={<RennieDatabasePage />} />
-        </Routes>
-        <Footer />
-       </div>
+              <AdminPage />
+            </PrivateRoute>
+          }
+        />
+        <Route path="/login" element={<LoginPage />} />
+        <Route pate="/home" element={<HomePage/>} />
+        <Route path="/admin" element={<AdminPage />} />
+        <Route path="/register" element={<RegisterPage />} />
+      </Routes>
+      <Footer />
+    </div>
   );
 }
 
 export default App;
-

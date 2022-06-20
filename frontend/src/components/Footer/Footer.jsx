@@ -3,16 +3,10 @@ import "./Footer.css";
 const Footer = () => {
   return (
     <div>
+
     <footer>
-       <input type='checkbox'></input>
-       <input type='checkbox'></input>
-       <input type='checkbox'></input>
-       <input type="checkbox"></input>
-       <l>HOME</l> | | <l>FACEBOOK</l> | | <l>SHOPIFY</l>
-        <input type='checkbox'></input>
-       <input type='checkbox'></input>
-       <input type="checkbox"></input>
-       <input type='checkbox'></input>
+
+      <p>Copyright © 2022</p>{" "}
     </footer>
     </div>
   );

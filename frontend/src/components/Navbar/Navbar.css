@@ -1,3 +1,39 @@
-button {
-    border: round;
+ul {
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
+}
+
+li {
+  font-size: 1rem;
+}
+
+.navBar {
+  background-image: url("./TopHorizontal.png");
+  box-shadow: 4px 2px 5px rgb(255, 251, 251);
+  background-repeat: no-repeat;
+  background-position: 0;
+  background-size: fill;
+  color: white;
+  margin-bottom: 5rem;
+  padding: 1.5rem 8rem;
+}
+
+.navBar button {
+  background-color: transparent;
+  background: transparent;
+  border: 4px solid silver;
+  color: silver;
+  padding: 0.4rem 0.5rem;
+}
+
+.navBar button:hover {
+  background: white;
+  color: steelblue;
+  cursor: pointer;
+}
+
+.brand {
+  cursor: pointer;
+  font-size: 2rem;
 }
