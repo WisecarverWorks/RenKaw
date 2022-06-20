@@ -13,10 +13,11 @@ const Navbar = () => {
     <div className="navBar">
       <ul>
         <li className="brand">
-          <Link to="/" style={{ textDecoration:"wavy", color: 'lavender' }}>
-            <b>Artwork Portfolio</b>
-          </Link>
-
+          </li>
+          </ul>v.1
+          <ul>Application </ul>
+          <ul>
+          <li>
           {user ? (
             <button onClick={logoutUser}>O</button>
           ) : (

@@ -13,13 +13,12 @@ h1 {
 }
 
 body {
-
   /* background-image: url('./Images/fourpaintings.jpg'); */
   background-position: center;
-
+  background-color: transparent;
   background-repeat: no-repeat;
-  background-size: auto;
-  border: 3px solid black;
+  background-size: contain;
+
 }
 
 label {
@@ -27,9 +26,8 @@ label {
   align-items: center; 
 }
 html {
-  /* background: radial-gradient(circle, hsla(120, 93%, 84%, 1) 0%, hsla(185, 90%, 51%, 1) 100%); */
-  box-shadow: gray;
-
+  max-width: contain;
+  max-height: fill;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
@@ -40,12 +38,13 @@ p {
 
 button {
   background-color: transparent;
-  border: 2px solid steelblue;
-  color: steelblue;
+  border: 2px solid rgb(175, 41, 153);
+  color: rgb(167, 70, 180);
   font-size: 1rem;
   font-family: inherit;
   max-width: 100px;
-  padding: 0.5rem 0.5rem;
+  max-height: 100%;
+  padding: 0.5rem 0.2rem;
 }
 
 button:hover {
@@ -55,18 +54,21 @@ button:hover {
 }
 
 .container {
-  margin: 0 auto;
+  margin: 0;
   max-width: fill;
-  overflow: auto;
   text-align: center;
 }
 
 .form {
+  size: fit-content;
   align-items: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  gap: 1rem;
+  width: 100%;
+  height: fill;
+  color: hotpink;
+  scrollbar-gutter:initial;
+  flex-direction:column;
+  justify-content:space-around;
+  gap: .5rem;
 }
 
 .form input {
@@ -82,18 +84,18 @@ button:hover {
   padding: 10rem;
  }
 .rich-editor .rdw-editor-main {
-  background-color: #fff;
+  background-color: transparent;
  }
 .rich-editor .DraftEditor-editorContainer {
   width: contain;
   padding: 1rem;
  }
 .draft-editor-wrapper {
-  border: 1px solid #ccc;
+  border: 2px solid #ccc;
 }
 .html-view {
 
-  background-color: silver;
+  background-color: transparent;
   color: #000;
   margin: auto;
   width: 90%;

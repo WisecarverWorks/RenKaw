@@ -45,6 +45,9 @@ const LoginPage = () => {
         <Link to="/register">Click to register!</Link>
         <button>Login!</button>
       </form>
+    <body>
+
+    </body>
     </div>
   );
 }
