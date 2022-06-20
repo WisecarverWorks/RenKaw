@@ -6,7 +6,7 @@ from authentication.models import User
 # <============== We are going to create a class called Assessment
 class Assessment(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
-    questions = models.SmallIntegerField()
+    questions = models.CharField(max_length=300)
     date = models.DateField()
     
 # <============== Enough for user stories

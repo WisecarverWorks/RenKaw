@@ -7,47 +7,54 @@
   padding: 0;
   box-sizing: inherit;
 }
+
 ul {
   display: flex;
   justify-content: space-between;
   list-style-type: georgian;
 }
-
+h1 {
+  color: rgb(124, 123, 123);
+}
 li {
   font-size: 20;
 }
 
 .navBar button:hover {
-  background: transparent;
-  color: rgb(232, 238, 244);
+  background:transparent;
+  color: rgb(61, 73, 86);
   cursor: pointer;
 }
 button {
-  padding: 10px;
-  background-blend-mode: color-burn;
-  border-radius: 240px;
-  border-width: 50;
+  background-image: url('./Images/emblem\ dark.png');
+  padding: 1px;
+  border: flex;
 }
 .navBar button {
-  background-image: url('./Images/ralph.jpg');
-  background-size: cover;
-  border: 1px solid rgb(42, 202, 138);
-  color: white;
+  background-color: transparent;
+  color: whitesmoke;
   padding: 0.4rem 0.5rem;
 }
 .navBar {
-  background-image: url('./Images/markus.jpg');
-  background-size: contain;
-  box-shadow: 4px 2px 5px blue;
-  color: white;
+  background-image: url('./Images/only\ .png');
+  /* background-size: cover; */
+  background-position-x: center;
+  background-position-y: center;
+  background-repeat: no-repeat;
+  box-shadow: 4px 6px 5px R 0, G 0, B 0;
+  color: transparent;
   margin-bottom: 1rem;
-  padding: 1.5rem 2rem;
+  padding: 1rem 1rem;
 }
 html {
-  background-image: url('./Images/ralph.jpg');
-  height: fit-content;
-  width: fit-content;
-  grid-template-columns: min-content;
+  /* background-image: url('./Images/Gif'); */
+  background-color: beige;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 50;
+  width: fill;
+  grid-template-columns:subgrid;
   box-sizing: border-box;
   font-family: sans-serif;
 }
@@ -58,9 +65,12 @@ p {
 
 button {
   background-color: transparent;
-  border: 1px dotted steelblue;
-  color: steelblue;
-  font-size: 1rem;
+  border-radius: 360;
+  border: 1px dotted R 235, G 30, B 35;
+  background-repeat: no-repeat;
+  background-size: contain;
+  color: white;
+  font-size: .5rem;
   font-family: inherit;
   max-width: 100px;
   padding: 0.5rem 0.5rem;
@@ -81,10 +91,11 @@ button:hover {
 
 .form {
   align-items: center;
+  position: static;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  gap: 1rem;
+  gap: 15px;
 }
 
 .form input {
@@ -93,19 +104,28 @@ button:hover {
   height: 25px;
   margin: 5px;
   padding: 3px 7px;
-  font-size: 17px;
+  font-size: 15px;
 }
 footer {
-  position:fixed;
-  background-image: url('./Images/engin.jpg');
+  background-color: transparent;
+  box-shadow: 4px 5px 5px rgb(255, 250, 250);
+  background-size: fill;
+  position: fixed;
+  background-repeat: no-repeat;
+  background-position: center;
   align-content: center;
   bottom: 0;
-  font-size: 1rem;
-  padding: 1.5rem;
+  font-size: 1.25rem;
+  padding: .45rem 1.25rem;
   right: 0;
   text-align: center;
+  height: 10%;
   width: 100%;
 }
-button {
-  background-size: auto;
+
+label {
+  text-emphasis-position: center;
+  color: silver;
+  font-size: medium;
+  position: inherit;
 }

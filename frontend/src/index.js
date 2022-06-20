@@ -3,7 +3,9 @@ import ReactDOM from "react-dom";
 import App from "./App";
 import { AuthProvider } from "./context/AuthContext";
 import { BrowserRouter as Router } from "react-router-dom";
-
+import './pages/AssessmentPage/AssessmentPage';
+import './pages/BuisnessPortfolioPage/BuisnessPortfilioPage';
+import 'react-bootstrap';
 // import 'semantic-ui-css/semantic.min.css'
 
 
