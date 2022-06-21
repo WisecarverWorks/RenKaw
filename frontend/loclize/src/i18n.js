@@ -19,8 +19,20 @@ i18n
             en: {
                 translation: {
                     // here we will place translations...
+                    description: {
+                        part1: 'Edit <1>src/App.js<1> and save to reaload.',
+                        part2: 'Learn React'
+                    }
                 }
-            }
+            },
+            de: {
+              translation: {
+                description: {
+                    part1: 'Andre <1>src/App.js</1> und speichere um neu zu laden.',
+                    part2: 'Lerne React'
+                }
+              }
+           }
         }
     });
 
