@@ -11,9 +11,9 @@ input[type=text], select {
   
   /* Style the submit button */
 input[type=submit] {
-  width: fi;
+  width: fill;
   background-color: #04AA6D;
-  color: white;
+  color: grey;
   padding: 14px 20px;
   margin: 8px 0;
   border: none;
@@ -25,7 +25,9 @@ input[type=submit] {
 input[type=submit]:hover {
   background-color: #45a049;
 }
-
+h4 {
+  color: grey;
+}
 body {
   text-rendering: optimizeLegibility;
   text-shadow: #04AA6D;

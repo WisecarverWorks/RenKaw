@@ -21,11 +21,11 @@ const AdminPage = () => {
                                 <label for="Date-Time">Date-Time</label>
                                 <input type="date" id="Date-Time"/>
                                 <select  name="Asssessment-File">
-                                <option value='.pdf'>PDF</option>
-                                <option value='.png'>PNG</option>
-                                <option value='.txt'>TXT</option>
-                            </select>
-                          <input type="submit" value="Submit" onClick/>
+                                    <option value='.pdf'>PDF</option>
+                                    <option value='.png'>PNG</option>
+                                    <option value='.txt'>TXT</option>
+                                </select>
+                                <input type="submit" value="Submit" onClick/>
                             </form>
                         </body>
                     </div>      

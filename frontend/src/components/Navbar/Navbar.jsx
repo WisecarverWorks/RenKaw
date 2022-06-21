@@ -25,8 +25,13 @@ const Navbar = () => {
           )}
         </li>
       </ul>
-      
-
+      <select className="dropdown">
+        <button class="dropbtn">Dropdown</button>
+         classs="dropdown-content">
+          <a href="../../pages/HomePage">Home</a>
+          <a href="../../pages/HomePage">Home</a>
+          <a href="../../pages/HomePage">Home</a>
+        </select>
     </div>
 
   );
