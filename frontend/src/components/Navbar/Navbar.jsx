@@ -2,6 +2,7 @@ import React from "react";
 import { useContext } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import AuthContext from "../../context/AuthContext";
+import RegisterPage from "../../pages/RegisterPage/RegisterPage";
 // import LoginPage from '../../pages/LoginPage/LoginPage';
 // import RegisterPage from '../../pages/RegisterPage/RegisterPage';
 import "./NavBar.css";
@@ -25,13 +26,7 @@ const Navbar = () => {
           )}
         </li>
       </ul>
-      <select className="dropdown">
-        <button class="dropbtn">Dropdown</button>
-         classs="dropdown-content">
-          <a href="../../pages/HomePage">Home</a>
-          <a href="../../pages/HomePage">Home</a>
-          <a href="../../pages/HomePage">Home</a>
-        </select>
+       <Link to={<RegisterPage/>} />
     </div>
 
   );

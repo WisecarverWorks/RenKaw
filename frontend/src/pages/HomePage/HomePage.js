@@ -1,6 +1,7 @@
 import React from "react";
 import { useEffect, useState } from "react";
 import useAuth from "../../hooks/useAuth";
+import { Container } from "react-bootstrap";
 // import { Link } from "react"
 
 import "./HomePage.css";
@@ -33,9 +34,17 @@ const HomePage = () => {
 
   
   return (
-    <div className="container-fluid">
-
-    </div>
+    <Container >    
+      
+      <header>RENNIE TILLIS ARTWORK</header>
+        <h1>HOMEPAGE</h1>
+      
+        <table>The HomePage is where all customers can see new art that is being sold, as well as any bulletins or assessments posted by an admin.  </table>
+          <th>MISSION</th>
+          <dl></dl>
+        
+    
+    </Container>
   );
 };
 
