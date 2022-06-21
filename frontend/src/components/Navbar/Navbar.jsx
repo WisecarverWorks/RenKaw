@@ -7,18 +7,14 @@ import RegisterPage from "../../pages/RegisterPage/RegisterPage";
 // import RegisterPage from '../../pages/RegisterPage/RegisterPage';
 import "./NavBar.css";
 
-const Navbar = () => {
+const NavBar = () => {
   const { logoutUser, user } = useContext(AuthContext);
   const navigate = useNavigate();
   return (
-    <div className="navBar">
+    <div bg="info" variant="dark">
+      <h3><small className='text-muted'>Artwork</small>Application v.1</h3>
       <ul>
         <li className="brand">
-          </li>
-          </ul>v.1
-          <ul>Application </ul>
-          <ul>
-          <li>
           {user ? (
             <button onClick={logoutUser}>O</button>
           ) : (
@@ -32,4 +28,4 @@ const Navbar = () => {
   );
 };
 // Our navbar will be primarily for logging in and out. 
-export default Navbar;
+export default NavBar;

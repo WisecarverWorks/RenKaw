@@ -2,10 +2,10 @@
 import React, { useState } from 'react';
 // Import SVG files
 import {ReactComponent as ThumbsUp} from "../SVG/thumbs-up-solid.svg";
-import {ReactComponent as ThumbsDown} from "../SVG/thumbs-down-solid.svg";
+import {ReactComponent as ThumbsDown} from "../SVG/thumbs-up-solid.svg";
 
 // Body
-const Post = (props) => {
+const Bulletin = (props) => {
 
     const [likeColor, setLikeColor] = useState("grey"); // The color of likeColor
     const [dislikeColor, setDislikeColor] = useState("grey"); // The color of DislikeColor
@@ -24,20 +24,19 @@ const Post = (props) => {
         }
         else{
             alert("Error with likeColor/DislikeColor Button");
-            console.log(alert);
         }
     }
     return  (
         // Here we will return a div which will include our thumbsup or down icon, as well as our post-box.
-        <div className= "postbox">
-            <p>{props.postName}</p>
-            <p>{props.postBody}</p>
+        <div className= "post-box">
+            <p>{props.bulletin.bulletinTitle}</p>
+            <p>{props.bulletin.bulletinPost}</p>
             <span>
-                <ThumbsUp height='1rem' fill={likeColor} style ={{'margin-right': '1em'}} onClick={() => togglelikeColorDislikeColor("like")}/>
+                <ThumbsUp height='1rem' fill={likeColor} style ={{'margin-right': '1rem'}} onClick={() => togglelikeColorDislikeColor("like")}/>
                 <ThumbsDown height='1rem' fill={dislikeColor} onClick={() => togglelikeColorDislikeColor("dislike")}/>
             </span>
         </div>
     );
 }
 // Export our Porp
-export default Post;
+export default Bulletin;

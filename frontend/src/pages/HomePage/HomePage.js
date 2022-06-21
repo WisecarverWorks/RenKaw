@@ -1,7 +1,7 @@
 import React from "react";
 import { useEffect, useState } from "react";
 import useAuth from "../../hooks/useAuth";
-import { Container } from "react-bootstrap";
+import { Container, Dropdown, Button } from "react-bootstrap";
 // import { Link } from "react"
 
 import "./HomePage.css";
@@ -14,35 +14,42 @@ const HomePage = () => {
   // The "token" value is the JWT token that you will send in the header of any request requiring authentication
   //TODO: Add an AddCars Page to add a car for a logged in user's garage
   const [user, token] = useAuth();
-  const [artwork, setArtwork] = useState([]);
+  const [cars, setCars] = useState([]);
 
   useEffect(() => {
-    const fetchArtwork = async () => {
+    const fetchCars = async () => {
       try {
-        let response = await axios.get("http://127.0.0.1:8000/api/artwork/", {
+        let response = await axios.get("http://127.0.0.1:8000/api/cars/", {
           headers: {
-            Authorization: "Allow any",
+            Authorization: "Bearer " + token,
           },
         });
-        setArtwork(response.data);
+        setCars(response.data);
       } catch (error) {
-        console.log(error.message);
+        console.log(error.response.data);
       }
     };
-    fetchArtwork();
-  },);
+    fetchCars();
+  }, [token]);
 
-  
   return (
-    <Container >    
+    <Container>    
       
       <header>RENNIE TILLIS ARTWORK</header>
         <h1>HOMEPAGE</h1>
       
         <table>The HomePage is where all customers can see new art that is being sold, as well as any bulletins or assessments posted by an admin.  </table>
           <th>MISSION</th>
-          <dl></dl>
-        
+            <tr>Create a list of links that we can use to not only use but showcase the Application</tr>
+            <tb>
+            <tr><medium>The list of links should be here</medium></tr>
+              <li>
+                <Dropdown>
+                  <Button onclick="homepage.location='../HomePage/HomePage'">HomePage</Button>
+                  <Button onclick="adminpage.location='../AdminPage/AdminPage'">AdminPage</Button>
+                </Dropdown>
+              </li>
+            </tb>
     
     </Container>
   );

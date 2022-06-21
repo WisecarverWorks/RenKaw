@@ -9,13 +9,15 @@ import HomePage from "./pages/HomePage/HomePage";
 import LoginPage from "./pages/LoginPage/LoginPage";
 import RegisterPage from "./pages/RegisterPage/RegisterPage";
 import AdminPage from "./pages/AdminPage/AdminPage";
+import BulletinPage from "./pages/BulletinPage/BulletinPage";
 // Component Imports
-import Navbar from "./components/NavBar/NavBar";
+import NavBar from "./components/NavBar/NavBar";
 import Footer from "./components/Footer/Footer";
 
 // Util Imports
 import PrivateRoute from "./utils/PrivateRoute";
 import '../node_modules/react-draft-wysiwyg/dist/react-draft-wysiwyg.css';
+
 
 const lngs = {
   en: { nativeName: 'English' },
@@ -45,13 +47,13 @@ function App() {
           </Trans>
         </p>
       </header>
-      <Navbar />
+      <NavBar />
       <Routes>
         <Route
           path="/"
           element={
             <PrivateRoute>
-              <HomePage />
+              <BulletinPage />
             </PrivateRoute>
           }
         />
@@ -59,6 +61,7 @@ function App() {
         <Route pate="/home" element={<HomePage/>} />
         <Route path="/admin" element={<AdminPage />} />
         <Route path="/register" element={<RegisterPage />} />
+        <Route path="/bulletin" element={<BulletinPage />} />
       </Routes>
       <Footer />
     </div>
