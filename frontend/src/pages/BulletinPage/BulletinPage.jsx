@@ -30,13 +30,55 @@ import CreatePost from '../../components/CreatePost/CreatePost';
           <Col>
             {" "}
             <DisplayPosts posts={posts} />{" "}
-            <h3>Here wIwill be where we show our bulletin feedback</h3>
+            <h3>Here we will be where we show our bulletin feedback</h3>
             <p>Lorem ipsum dolor sit amet quisque sodales. Laoreet montes integer ante ullamcorper interdum commodo suspendisse. Dapibus euismod hac ac senectus dictum lacus morbi. Primis     dignissim vehicula pellentesque litora magnis donec arcu non tincidunt inceptos netus. Laoreet class ridiculus netus ultrices litora. Inceptos venenatis suscipit pede convallis vestibulum commodo consectetuer.
 
             Fermentum erat tempus sollicitudin congue maximus. Finibus ante cubilia scelerisque praesent lacinia habitasse lorem sed odio taciti. Nullam sem posuere magna facilisi purus leo hendrerit nulla. Himenaeos accumsan venenatis nullam pellentesque eu faucibus in amet nascetur. Class massa libero platea erat suspendisse facilisis.</p>
           </Col>
         </Row>
+        <Row>
+          <Row> 
+            <civ>
+            <Row>
+              <div>
+              <Row>
+                <div className='upload'>
+                <Row>
+                  <div>
+                    <input type="textarea"></input>
+                  </div>
+                </Row>
+                </div>
+              </Row>
+              </div>
+            </Row>
+            </civ>
+          </Row>
+        </Row>
       </Container>
+      <body>
+      <Container>  
+      <Row>
+          <Row> 
+            <civ>
+            <Row>
+              <div>
+              <Row>
+                <div className='upload'>
+                <Row>
+                  <div>
+                    <input type="textarea"></input>
+                  </div>
+                </Row>
+                </div>
+              </Row>
+              </div>
+            </Row>
+            </civ>
+          </Row>
+        </Row>
+      </Container>
+      </body>
     </div>
     );
 }

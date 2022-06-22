@@ -1,6 +1,6 @@
 /* Style inputs */
 input[type=text], select {
-  width: fit-content;
+  width: 100%;
   padding: 12px 20px;
   margin: 8px 0;
   display: inline-block;
@@ -11,7 +11,7 @@ input[type=text], select {
   
 /* Style the submit button */
 input[type=submit] {
-  width: fill;
+  width:100%;
   background-color: grey;
   color: black;
   padding: 14px 20px;
@@ -34,7 +34,7 @@ body {
   text-shadow: #04AA6D;
 }
 html {
-  background-color: cornsilk;
+  background-color:transparent;
   background-size: cover;
   width: 100%;
   height: 100%;

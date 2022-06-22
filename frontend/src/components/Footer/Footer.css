@@ -1,8 +1,8 @@
 footer {
-  background-image: url("./Bottom Horizontal.jpg");
+  background-image: url("../../Images/background");
   background-position: 0;
   background-repeat: no-repeat;
-  background-size: fill;
+  background-size: 100%;
   position: fixed;
   color: silver;
   bottom: 0;
@@ -10,5 +10,5 @@ footer {
   left: 0;
   padding: 1rem;
   text-align: center;
-  width: stretch;
+  width: 100%;
 }
