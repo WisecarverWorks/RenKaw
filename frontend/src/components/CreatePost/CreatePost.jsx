@@ -22,10 +22,11 @@ const CreatePost = (props) => {
     return (
         <div className='form-box'>
         <Form onSubmit={handleSubmit}>
-            <Form.Label>Bulletin Title</Form.Label>
+            <Form.Label>Title</Form.Label>
             <Form.Control name='postName' onChange={(e) => setPostName(e.target.value)} value={postName}></Form.Control>
-            <Form.Label for="postBody">Bulletin Message</Form.Label>
+            <Form.Label for="postBody">Bulletin / Assessment Message</Form.Label>
             <Form.Control as="textarea" rows={4} name="postBody" onChange={(e) => setPostBody(e.target.value)} value={postBody}></Form.Control>
+            <input type='file'></input>ADD IMAGE
             <Button type="submit">Post!</Button>
         </Form>
         </div>

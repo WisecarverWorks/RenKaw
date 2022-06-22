@@ -31,10 +31,7 @@ function App() {
   const [count, setCounter] = useState(0);
 
   return (
-<<<<<<< HEAD
-    <div>
-=======
-    <div className="App">
+    <div className="container-fluid">
       <header className="App-header">
         <div>
           {Object.keys(lngs).map((lng) => (
@@ -52,7 +49,6 @@ function App() {
           </Trans>
         </p>
       </header>
->>>>>>> 8e95a9a334ed5e698620cf9d99597e4ef934902c
       <NavBar />
       <Routes>
         <Route

@@ -9,8 +9,8 @@
     border-color: hotpink;
     border-style: solid;
     background-color: pink;
-    height: 400px;
-    width: 700px;
+    height: 25rem;
+    width: 50rem;
     padding: 1em;
     font-size: large;
 }
@@ -24,5 +24,6 @@
 }
 Form{
     background-color: pink;
-    width:30rem;
+    width:40rem;
+    height: 20rem;
 }
