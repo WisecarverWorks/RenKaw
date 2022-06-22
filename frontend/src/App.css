@@ -19,6 +19,7 @@ body {
   background-repeat: no-repeat;
   background-size: contain;
 
+
 }
 
 label {
@@ -26,8 +27,8 @@ label {
   align-items: center; 
 }
 html {
-  max-width: contain;
-  max-height: fill;
+  max-width: 100%;
+  max-height: 85%;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
@@ -53,10 +54,15 @@ button:hover {
   color: white;
   background-color: steelblue;
 }
-
+div.container {
+  height: fill;
+  width: fill;
+}
 .container {
+  
   margin: 0;
   max-width: fill;
+  max-height: fill;
   text-align: center;
 }
 
@@ -105,3 +111,4 @@ button:hover {
 h4 {
  color: #fff;
 }
+
