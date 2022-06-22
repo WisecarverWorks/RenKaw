@@ -27,11 +27,11 @@ p {
 }
 
 button {
-  background-image: url('../../Images/psytrance.gif');  
-  border: hotpink;
+  /* background-image: url('../../Images/psytrance.gif');   */
+  border: solid hotpink;
   color: hotpink;
   font-size: 1rem;
-  background-size: fill;
+  background-size: cover;
   font-family: inherit;
   max-width: fill;
   height: max-content;
@@ -61,7 +61,7 @@ button:hover {
 .container {
   margin: 0;
   max-width: 100%;
-  height: fit-content;
+  height: 100%;
   text-align: center;
 }
 

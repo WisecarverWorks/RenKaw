@@ -1,15 +1,16 @@
 import React from "react";
 import { useEffect, useState } from "react";
 import useAuth from "../../hooks/useAuth";
-import { Container, Dropdown, Button } from "react-bootstrap";
+import { Container, Button } from "react-bootstrap";
+import { useNavigate } from 'react-router-dom';
 // import { Link } from "react"
 
 import "./HomePage.css";
 import "../AdminPage/AdminPage";
 import axios from "axios";
 
-
 const HomePage = () => {
+  const navigate = useNavigate();
   // The "user" value from this Hook contains the decoded logged in user information (username, first name, id)
   // The "token" value is the JWT token that you will send in the header of any request requiring authentication
   //TODO: Add an AddCars Page to add a car for a logged in user's garage
@@ -44,10 +45,11 @@ const HomePage = () => {
             <tb>
             <tr><medium>The list of links should be here</medium></tr>
               <li>
-                <Dropdown>
-                  <Button onclick="homepage.location='../HomePage/HomePage'">HomePage</Button>
-                  <Button onclick="adminpage.location='../AdminPage/AdminPage'">AdminPage</Button>
-                </Dropdown>
+                  <Button onClick={() => navigate("/login")}>Logout</Button>
+                  <Button onClick={() => navigate("/admin")}>Admin</Button>
+                  <Button onClick={() => navigate("/assessment")}>Assessment</Button>
+                  <Button onClick={() => navigate("/bulletin")}>Bulletin</Button>
+                  <Button onClick={() => navigate("/home")}>Home</Button>
               </li>
             </tb>
     

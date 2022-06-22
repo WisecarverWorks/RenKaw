@@ -2,7 +2,8 @@ import React from "react";
 import { useContext } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import AuthContext from "../../context/AuthContext";
-import RegisterPage from "../../pages/RegisterPage/RegisterPage";
+import { Button } from "react-bootstrap";
+// import RegisterPage from "../../pages/RegisterPage/RegisterPage";
 // import LoginPage from '../../pages/LoginPage/LoginPage';
 // import RegisterPage from '../../pages/RegisterPage/RegisterPage';
 import "./NavBar.css";
@@ -11,18 +12,21 @@ const NavBar = () => {
   const { logoutUser, user } = useContext(AuthContext);
   const navigate = useNavigate();
   return (
-    <div bg="info" variant="dark">
-      <h3><small className='text-muted'>Artwork</small>Application v.1</h3>
+    <div>
+      <h2 ><small >Artwork</small>Application v.1</h2>
       <ul>
         <li className="brand">
           {user ? (
-            <button onClick={logoutUser}>O</button>
-          ) : (
-            <button onClick={() => navigate("/login")}>I</button>
-          )}
+            <Button onClick={logoutUser}>Logout</Button>
+            ) : (
+            <Button onClick={() => navigate("/login")}>I</Button>
+            )}
         </li>
-      </ul>
-       <Link to={<RegisterPage/>} />
+            <Button onClick={() => navigate("/admin")}>Admin</Button>
+            <Button onClick={() => navigate("/assessment")}>Assessments</Button>
+            <Button onClick={() => navigate("/bulletin")}>Bulletin</Button>
+            <Button onClick={() => navigate("/home")}>Home</Button>
+        </ul>
     </div>
 
   );
