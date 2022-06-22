@@ -8,7 +8,7 @@ import LoginPage from "./pages/LoginPage/LoginPage";
 import RegisterPage from "./pages/RegisterPage/RegisterPage";
 import AdminPage from "./pages/AdminPage/AdminPage";
 // Component Imports
-import Navbar from "./components/NavBar/NavBar";
+import NavBar from "./components/NavBar/NavBar";
 import Footer from "./components/Footer/Footer";
 
 // Util Imports
@@ -19,7 +19,7 @@ import '../node_modules/react-draft-wysiwyg/dist/react-draft-wysiwyg.css';
 function App() {
   return (
     <div>
-      <Navbar />
+      <NavBar />
       <Routes>
         <Route
           path="/"

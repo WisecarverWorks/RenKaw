@@ -6,7 +6,7 @@ import AuthContext from "../../context/AuthContext";
 // import RegisterPage from '../../pages/RegisterPage/RegisterPage';
 import "./NavBar.css";
 
-const Navbar = () => {
+const NavBar = () => {
   const { logoutUser, user } = useContext(AuthContext);
   const navigate = useNavigate();
   return (
@@ -37,4 +37,4 @@ const Navbar = () => {
   );
 };
 // Our navbar will be primarily for logging in and out. 
-export default Navbar;
+export default NavBar;
